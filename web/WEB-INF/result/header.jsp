@@ -34,7 +34,7 @@
     </script>
     <div id="header", class="sito">
         <script></script>
-        <a href="index.jsp">Home</a>
+        <a href="index.jsp"><img src="./sitimg/garpiclogo.png" alt="Home" width="100px" height="100px"></a>
         <div class="ui-widget">
             <form action="RicercaPerTag" method="post" id="inviaTags">
             <label for="tags">Tags: </label>
