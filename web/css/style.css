@@ -78,6 +78,29 @@
     max-height: 300px;
 }
 
+ .cartolina {
+     width: 284px;
+     padding: 10px 10px 20px 10px;
+     overflow: hidden;
+     background-color: white;
+     box-shadow: 10px 10px 5px #aaaaaa;
+ }
+
+ #cartolinafoto{
+     width:auto;
+     min-width:100%;
+     min-height:100%;
+     overflow: hidden;
+ }
+
+ #cartolinacorsivo{
+     font-family: Forte;
+     font-weight: bolder;
+     font-size: large;
+     transform: rotate(-11deg);
+     float: right;
+ }
+
 .containerImmagini{
     background-repeat: no-repeat;
     background-size: auto;

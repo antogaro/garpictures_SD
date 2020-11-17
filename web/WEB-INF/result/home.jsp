@@ -51,8 +51,16 @@
     <form action="ChiamaProdotto" method="post">
      <c:forEach items="${prodotti}" var="prodotto">
          <button class="containerImmagini" type="submit" name="prodottoId" value="${prodotto.id}">
+             <div class="cartolina">
+                 <div id="cartolinafoto">
              <img src="./img/${prodotto.source}" alt="${prodotto.source}" class="prodotti">
+                </div>
+                 <div id="cartolinacorsivo">
+                         ${prodotto.nome}
+                 </div>
+             </div>
          </button>
+
      </c:forEach>
     </form>
 </div>
