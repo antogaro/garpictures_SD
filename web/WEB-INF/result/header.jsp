@@ -43,24 +43,19 @@
             </form>
         </div>
 
-        <%
-        if(beanUtente.isVisitatore()){
 
-    %>
-           Benvenuto, utente, effettua il <a href="login.jsp">Login</a>, oppure
-        <a href="registrazione.jsp">Registrati</a>.maybe also <a href="ChiamaCarrello">Carrello</a>
-    <%
-        }else{
-    %>
-        Benvenuto <a href="ChiamaModificaInformazioni">${beanUtente.nomeUtente}.</a> Consulta il tuo <a href="ChiamaCarrello">carrello</a>,oppure effettua il <a href="LogoutController">Logout</a>.
-        <%
-            if(beanUtente.isAmministratore()){
-        %>
-        <a href="ChiamaPannelloAdmin">Pannello admin</a>
-    <%
-            }
-        }
-    %>
+        <c:choose>
+            <c:when test="${beanUtente.visitatore == true}">
+                Benvenuto, utente, effettua il <a href="login.jsp">Login</a>, oppure
+                <a href="registrazione.jsp">Registrati</a>.maybe also <a href="ChiamaCarrello">Carrello</a>
+            </c:when>
+            <c:when test="${beanUtente.visitatore == false}">
+                Benvenuto <a href="ChiamaModificaInformazioni">${beanUtente.nomeUtente}.</a> Consulta il tuo <a href="ChiamaCarrello">carrello</a>,oppure effettua il <a href="LogoutController">Logout</a>.
+            </c:when>
+        </c:choose>
+        <c:if test="${beanUtente.amministratore == true}">
+            <a href="ChiamaPannelloAdmin">Pannello admin</a>
+        </c:if>
     </div>
 
 </header>
