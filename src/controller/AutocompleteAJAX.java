@@ -36,9 +36,6 @@ public class AutocompleteAJAX extends HttpServlet {
                 tagsDaRestituire.add("+"+x.getTag());
             }
         }
-        for(String x: tagsDaRestituire){
-            System.out.println(x);
-        }
         String json = new Gson().toJson(tagsDaRestituire);
         response.getWriter().write(json);
     }
