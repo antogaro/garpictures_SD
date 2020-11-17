@@ -1,21 +1,3 @@
-*{
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-}
-
- .sito{
-    display: flex;
-    border: 1px solid black;
-    justify-content: center;
-    padding: 18px;
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-top: 10px;
-    margin-bot: 10px;
-    background-color: bisque;
-    flex-wrap: wrap;
-}
 
 
  .ilogin {
@@ -112,4 +94,18 @@ body#login{
     background-repeat: no-repeat;
     background-position-x: center;
     background-position-y: 8vh;
+}
+
+
+.sito{
+    display: flex;
+    border: 1px solid black;
+    justify-content: center;
+    padding: 18px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 10px;
+    margin-bot: 10px;
+    background-color: bisque;
+    flex-wrap: wrap;
 }
