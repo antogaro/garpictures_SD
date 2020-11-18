@@ -17,10 +17,6 @@ import java.util.List;
 @WebServlet("/ChiamaCarrello")
 public class ChiamaCarrello extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        HttpSession session = request.getSession();
-        Carrello carrello = (Carrello) session.getAttribute("carrello");
-        List<Prodotto> prodottiCarrello = carrello.getCarrelloProdotti();
-        request.setAttribute("prodotti",prodottiCarrello);
         RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/result/CarrelloView.jsp");
         dispatcher.forward(request,response);
     }
