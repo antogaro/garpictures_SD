@@ -10,7 +10,7 @@
     <%
       if(!carrello.isEmpty()){
     %>
-<c:forEach items="${prodotti}" var="prodotto">
+<c:forEach items="${carrello.carrelloProdotti}" var="prodotto">
     <div class="sito" id="${prodotto.nome}">
         <img src="./img/${prodotto.source}" class="prodotti">
         ${prodotto.nome}

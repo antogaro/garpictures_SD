@@ -31,7 +31,7 @@
     <div id="spazio_ricerca">
         <form action="RicercaPerTag" method="post" id="inviaTags">
             <input type="text" placeholder="Cerca per tag..." id="tags" name="tag" class="searchTag">
-            <button type="submit" class="searchTagButton">C</button>
+            <button id="searchButton" type="submit" class="searchTagButton"><img src="./sitimg/search.png" alt="menu" width="30" height="30"></button>
         </form>
     </div>
     <nav id="spazio_menu">
@@ -50,10 +50,10 @@
         </ul>
     </nav>
     <div id="spazio_carrello">
-        <a href="/"><img src="https://via.placeholder.com/50x50" alt="logo garpictures"></a>
+        <a href="ChiamaCarrello"><img src="./sitimg/carrello.png" width="50px" height="50px" alt="logo garpictures"></a>
     </div>
     <div id="spazio_hamburger">
-        <button id="hamburger" onclick="apriMenu()" aria-label="menu"><img src="https://via.placeholder.com/30x30" alt="menu" width="30" height="30"></button>
+        <button id="hamburger" onclick="apriMenu()" aria-label="menu"><img src="./sitimg/hamburger.png" alt="menu" width="30" height="30"></button>
     </div>
 </header>
 

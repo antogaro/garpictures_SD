@@ -1,10 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
+
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+.menu li a:link{
+    text-decoration: none;
+}
+
+.menu li a:visited{
+    text-decoration: none;
+    color: inherit;
+}
+
 header{
+    font-family: 'Raleway', sans-serif;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     height: 80px;
-    background-color: #EDEDED;
+    background-color: #bcb8ce;
+    border-bottom: 1px solid #917898;
     padding: 0 4%;
 
 }
@@ -14,6 +32,34 @@ header #spazio_logo{
 header #spazio_ricerca{
     min-width: 200px;
 }
+
+header #spazio_ricerca #inviaTags{
+    display: flex;
+    align-items: center;
+}
+
+header #spazio_ricerca #searchButton{
+    border:0;
+    background:transparent;
+}
+
+header #spazio_ricerca #searchButton:hover{
+    cursor: pointer;
+}
+
+header #spazio_ricerca #tags{
+    border:none;
+    border-bottom: 1px solid #917898;
+    background-color:   #bcb8ce;
+    font-family: 'Raleway', sans-serif;
+    height: 40px;
+    font-size: 20px;
+}
+
+header #spazio_ricerca #tags::placeholder{
+    color: #917898;
+}
+
 header #spazio_menu{
     display: flex;
     flex-direction: row;
@@ -38,7 +84,20 @@ header #spazio_hamburger,
     display:none;
 }
 
+header #hamburger{
+    border:0;
+    background:transparent;
+}
+
+
+header #hamburger:hover{
+    cursor: pointer;
+}
+
 @media all and (max-width: 767px){
+    header{
+        border: none;
+    }
 
     header #spazio_logo{
 
@@ -56,10 +115,12 @@ header #spazio_hamburger,
         display:flex;
     }
     #menu_mobile{
+        font-family: 'Raleway', sans-serif;
         display:none;
-        background-color: #EDEDED;
+        background-color: #bcb8ce;
         justify-content:center;
         transition: height 0.3s ease-in-out;
+        border-bottom: 1px solid #917898;;
     }
     #menu_mobile.aperto{
         display:flex;
