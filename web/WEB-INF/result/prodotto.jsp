@@ -1,50 +1,11 @@
-<%@ page import="model.Prodotto" %>
-<%@ page import="java.util.ArrayList" %>
-<%@ page import="model.Tag" %>
-<%@ page import="java.util.List" %><%--
+<%--
   Created by IntelliJ IDEA.
   User: Antonio
   Date: 10/28/2020
   Time: 3:00 PM
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib prefix='c' uri='http://java.sun.com/jsp/jstl/core' %>
-<html>
-<head>
-    <title>Prodotto</title>
-    <link rel="stylesheet" href="./css/style.css", type="text/css">
-    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-    <script>
-        $(document).on("click", "#aggiungi", function() {
-            var bottone = $(this).val();
-            $.post("CarrelloAJAX", {idProdotto: ${prodotto.id}, bottone: bottone },
-                function(returnedData){
-                    $("#aggiungi").attr("value","rimuovi");
-                    $("#aggiungi").html("Rimuovi dal carrello");
-                    $("#aggiungi").attr("id","rimuovi");
-                    $("#popup").show();
-                    $("#popup").text("Elemento aggiunto al carrello!");
-                    $("#popup").fadeOut(2500)
-                });
-        });
-        $(document).on("click", "#rimuovi", function() {
-            var bottone = $(this).val();
-            $.post("CarrelloAJAX", {idProdotto: ${prodotto.id}, bottone: bottone },
-                function(returnedData){
-                    $("#rimuovi").attr("value","aggiungi");
-                    $("#rimuovi").html("Aggiungi al carrello");
-                    $("#rimuovi").attr("id","aggiungi");
-                    $("#popup").show();
-                    $("#popup").text("Elemento rimosso dal carrello!");
-                    $("#popup").fadeOut(2500)
-                });
-        });
-
-    </script>
-</head>
 <%@ include file="/WEB-INF/result/header.jsp" %>
-<body>
 <div class="sito">
     <div class="sito" id="divProdotto">
     <img src="./img/${prodotto.source}" class="prodotti">
@@ -95,4 +56,31 @@
     </div>
 </div>
 </body>
+<script>
+    $(document).on("click", "#aggiungi", function() {
+        var bottone = $(this).val();
+        $.post("CarrelloAJAX", {idProdotto: ${prodotto.id}, bottone: bottone },
+            function(returnedData){
+                $("#aggiungi").attr("value","rimuovi");
+                $("#aggiungi").html("Rimuovi dal carrello");
+                $("#aggiungi").attr("id","rimuovi");
+                $("#popup").show();
+                $("#popup").text("Elemento aggiunto al carrello!");
+                $("#popup").fadeOut(2500)
+            });
+    });
+    $(document).on("click", "#rimuovi", function() {
+        var bottone = $(this).val();
+        $.post("CarrelloAJAX", {idProdotto: ${prodotto.id}, bottone: bottone },
+            function(returnedData){
+                $("#rimuovi").attr("value","aggiungi");
+                $("#rimuovi").html("Aggiungi al carrello");
+                $("#rimuovi").attr("id","aggiungi");
+                $("#popup").show();
+                $("#popup").text("Elemento rimosso dal carrello!");
+                $("#popup").fadeOut(2500)
+            });
+    });
+
+</script>
 </html>

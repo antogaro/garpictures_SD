@@ -1,9 +1,4 @@
-<%@ page import="model.Prodotto" %>
-<%@ page import="java.util.List" %>
-<%@ page import="java.util.ArrayList" %>
-<%@ page import="java.util.Collections" %>
-<%@ page import="model.Tag" %>
-<%@ taglib prefix='c' uri='http://java.sun.com/jsp/jstl/core' %>
+
 <%--
   Created by IntelliJ IDEA.
   User: Antonio
@@ -11,14 +6,7 @@
   Time: 4:57 PM
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-<head>
-    <title>Garpictures</title>
-    <link rel="stylesheet" href="./css/style.css", type="text/css">
-</head>
 <%@ include file="/WEB-INF/result/header.jsp" %>
-<body>
 <c:if test="${prodottoCaricato != null}">
     <script>
         alert("Prodotto aggiunto con successo.");

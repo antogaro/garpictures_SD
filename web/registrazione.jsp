@@ -1,4 +1,3 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: Antonio
@@ -6,18 +5,7 @@
   Time: 1:51 PM
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-<head>
-    <title>Registrazione</title>
-    <link rel="stylesheet" href="./css/style.css", type="text/css">
-    <jsp:useBean id="beanUtente" class="model.Utente" scope="session" />
-    <script src="formValidator.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script>
-    </script>
-</head>
-<body>
+<%@ include file="/WEB-INF/result/header.jsp" %>
 <div class="sito">
     <form action="Registrazione" id="registrazione" method="post">
            <table>
@@ -62,6 +50,6 @@
         <p>${errore}</p>
     </div>
 </c:if>
-
 </body>
+    <script src="formValidator.js"></script>
 </html>
