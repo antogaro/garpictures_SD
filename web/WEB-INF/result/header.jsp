@@ -25,31 +25,54 @@
 </head>
 <body>
 <header>
+    <div id="spazio_logo">
+        <a href="IndexServlet"><img src="./sitimg/garpiclogo.png" width="50px" height="50px" alt="logo garpictures"></a>
+    </div>
+    <div id="spazio_ricerca">
+        <form action="RicercaPerTag" method="post" id="inviaTags">
+            <input type="text" placeholder="Cerca per tag..." id="tags" name="tag" class="searchTag">
+            <button type="submit" class="searchTagButton">C</button>
+        </form>
+    </div>
+    <nav id="spazio_menu">
         <ul class="menu">
-                <div class="logo">
-                <a href="index.jsp"><img src="./sitimg/garpiclogo.png"></a>
-                <form action="RicercaPerTag" method="post" id="inviaTags">
-                <input type="text" placeholder="Cerca per tag..." id="tags" name="tag" class="searchTag">
-                    <button type="submit" class="searchTagButton">C</button>
-                </form>
-            </div>
-            <c:if test="${beanUtente.amministratore == true}">
-                <li class="item navButton"><a href="ChiamaPannelloAdmin">Pannello admin</a></li>
+            <c:if test="${beanUtente.visitatore == true}">
+                <li class="item"><a href="registrazione.jsp">Registrati</a></li>
+                <li class="item"><a href="login.jsp">Login</a></li>
             </c:if>
-    <c:choose>
-            <c:when test="${beanUtente.visitatore == true}">
-                <li class="item navButton"><a href="login.jsp">Login</a></li>
-                <li class="item navButton"><a href="registrazione.jsp">Registrati</a></li>
-            </c:when>
-            <c:when test="${beanUtente.visitatore == false}">
-                <li class="item navButton"> <a href="LogoutController">Logout</a></li>
-                <li class="item navItem"><a href="ChiamaModificaInformazioni">${beanUtente.nomeUtente}</a> </li>
-            </c:when>
-        </c:choose>
-            <li class="item navItem"><a href="ChiamaCarrello">Carrello</a></li>
-            <li class="toggle"><span class="hamburger"></span></li>
+            <c:if test="${beanUtente.visitatore == false}">
+                <li class="item"><a href="ChiamaModificaInformazioni">${beanUtente.nomeUtente}</a></li>
+                <li class="item"><a href=LogoutController>Logout</a></li>
+            </c:if>
+            <c:if test="${beanUtente.amministratore==true}">
+                <li class="item"><a href="ChiamaPannelloAdmin">pannello admin</a></li>
+            </c:if>
         </ul>
+    </nav>
+    <div id="spazio_carrello">
+        <a href="/"><img src="https://via.placeholder.com/50x50" alt="logo garpictures"></a>
+    </div>
+    <div id="spazio_hamburger">
+        <button id="hamburger" onclick="apriMenu()" aria-label="menu"><img src="https://via.placeholder.com/30x30" alt="menu" width="30" height="30"></button>
+    </div>
 </header>
+
+<nav id="menu_mobile">
+    <ul class="menu">
+        <c:if test="${beanUtente.visitatore == true}">
+            <li class="item"><a href="registrazione.jsp">Registrati</a></li>
+            <li class="item"><a href="login.jsp">Login</a></li>
+        </c:if>
+        <c:if test="${beanUtente.visitatore == false}">
+            <li class="item"><a href="ChiamaModificaInformazioni">${beanUtente.nomeUtente}</a></li>
+            <li class="item"><a href=LogoutController>Logout</a></li>
+
+        </c:if>
+        <c:if test="${beanUtente.amministratore==true}">
+            <li class="item"><a href="ChiamaPannelloAdmin">pannello admin</a></li>
+        </c:if>
+    </ul>
+</nav>
 
 <script>
     var tags = [];
@@ -92,7 +115,9 @@
             document.getElementById('menu_mobile').style.height = '0';
         } else {
             document.getElementById("menu_mobile").classList.add('aperto');
-            document.getElementById('menu_mobile').style.height = '100%';
+            var numItems = $('.item').length;
+            var numItems = numItems * 3;
+            document.getElementById('menu_mobile').style.height = numItems+'%';
         }
     }
 </script>

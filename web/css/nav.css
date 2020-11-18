@@ -67,7 +67,7 @@ header #spazio_hamburger,
     #menu_mobile ul{
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: space-evenly;
         align-items: center;
         list-style-type: none;
     }
