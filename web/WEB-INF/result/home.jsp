@@ -12,8 +12,7 @@
         alert("Prodotto aggiunto con successo.");
     </script>
 </c:if>
-<div class="sito">
-
+<div class="sito" id="homecontainer">
     <c:if test="${not empty sessionScope.tagsUtente}">
 
     Stai filtrando in base ai seguenti tag:
@@ -41,7 +40,7 @@
          <button class="containerImmagini" type="submit" name="prodottoId" value="${prodotto.id}">
              <div class="cartolina">
                  <div id="cartolinafoto">
-             <img src="./img/${prodotto.source}" alt="${prodotto.source}" class="prodotti">
+             <img src="./img/${prodotto.source}" alt="${prodotto.source}" class="prodottihome">
                 </div>
                  <div id="cartolinacorsivo">
                          ${prodotto.nome}
