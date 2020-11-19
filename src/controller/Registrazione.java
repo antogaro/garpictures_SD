@@ -28,21 +28,19 @@ public class Registrazione extends HttpServlet {
         String provincia = request.getParameter("provincia");
         String via = request.getParameter("via");
         Utente utente = new Utente();
-        String address;
+        String address = "registrazione.jsp";
 
         //controllo che il nome sia nel giusto formato
         Pattern pattern = Pattern.compile("^[A-Za-z]{3,30}$",Pattern.CASE_INSENSITIVE);
         Matcher matcher = pattern.matcher(nome);
         if(!matcher.matches()){
             request.setAttribute("errore","errore nel formato del nome.");
-            address = "registrazione.jsp";
         }else{
             utente.setNome(nome);
         }
         matcher = pattern.matcher(cognome);
         if(!matcher.matches()){
             request.setAttribute("errore", "errore nel formato del cognome.");
-            address = "registrazione.jsp";
         }else{
             utente.setCognome(cognome);
         }
@@ -50,7 +48,6 @@ public class Registrazione extends HttpServlet {
         matcher = pattern.matcher(email);
         if(!matcher.matches()){
             request.setAttribute("errore","errore nel formato dell'email.");
-            address = "registrazione.jsp";
         }else{
             var filter = new UtenteDAO();
             boolean flag = false;
@@ -68,7 +65,6 @@ public class Registrazione extends HttpServlet {
         matcher = pattern.matcher(nomeUtente);
         if(!matcher.matches()){
             request.setAttribute("errore","errore nel formato del nome utente");
-            address = "registrazione.jsp";
         }else{
             var filter = new UtenteDAO();
             boolean flag = false;
@@ -87,7 +83,6 @@ public class Registrazione extends HttpServlet {
         System.out.println(matcher.matches());
         if(!matcher.matches()){
             request.setAttribute("errore","errore nel formato della via");
-            address = "registrazione.jsp";
         }else{
             utente.setIndirizzo(via);
         }
@@ -95,7 +90,6 @@ public class Registrazione extends HttpServlet {
         matcher = pattern.matcher(provincia);
         if(!matcher.matches()){
             request.setAttribute("errore","errore nel formato della provincia");
-            address = "registrazione.jsp";
         }else{
             utente.setProvincia(provincia);
         }
@@ -103,7 +97,6 @@ public class Registrazione extends HttpServlet {
         matcher = pattern.matcher(citta);
         if(!matcher.matches()){
             request.setAttribute("errore","errore nel formato della città");
-            address = "registrazione.jsp";
         }else{
             utente.setCitta(citta);
         }
@@ -111,7 +104,6 @@ public class Registrazione extends HttpServlet {
         matcher = pattern.matcher(telefono);
         if(!matcher.matches()){
             request.setAttribute("errore","errore nel formato del numero di telefono");
-            address = "registrazione.jsp";
         }else{
             utente.setTelefono(telefono);
         }
@@ -119,13 +111,13 @@ public class Registrazione extends HttpServlet {
         matcher = pattern.matcher(password);
         if(!matcher.matches()){
             request.setAttribute("errore","errore nel formato della password");
-            address = "registrazione.jsp";
         }else{
             utente.setPassword(password);
         }
         System.out.println(utente.getNomeUtente() + utente.getNome() + utente.getCognome() + utente.getCitta() + utente.getPassword() + utente.getIndirizzo()+ utente.getProvincia() + utente.getTelefono() + utente.getEmail());
         if(utente.getNomeUtente() != null && utente.getNome() !=null && utente.getCognome() != null && utente.getPassword() != null && utente.getEmail() != null && utente.getCitta() != null
         && utente.getIndirizzo() != null && utente.getProvincia() != null && utente.getTelefono() != null){
+
             utente.setVisitatore(false);
             utente.setAmministratore(false);
             HttpSession session = request.getSession();
@@ -133,10 +125,15 @@ public class Registrazione extends HttpServlet {
             var filter = new UtenteDAO();
             filter.doSave(utente);
             utente.setId(filter.retriveIdByUsername(utente.getNomeUtente()));
-            address = "IndexServlet";
-        }else address = "registrazione.jsp";
-        RequestDispatcher dispatcher = request.getRequestDispatcher(address);
-        dispatcher.forward(request,response);
+            address = "home";
+        }
+
+        if(address.equals("home")){
+            response.sendRedirect(address);
+        }else{
+            RequestDispatcher dispatcher = request.getRequestDispatcher(address);
+            dispatcher.forward(request,response);
+        }
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

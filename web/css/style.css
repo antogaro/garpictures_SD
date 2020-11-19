@@ -113,8 +113,13 @@
 .containerImmagini{
     background-repeat: no-repeat;
     background-size: auto;
+    border: none;
     padding: 0;
-    margin: 0;
+    margin: 10px;
+}
+
+.containerImmagini:hover{
+    cursor: pointer;
 }
 
 body{
@@ -143,10 +148,55 @@ body#login{
 }
 
 #homecontainer{
-     align-self: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+     padding: 1%;
+     margin: 1%;
      background-color: #d6dce4;
      border: 0px;
-     position: absolute;
      border-radius: 1.5em;
      box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+}
+
+#tagcontainer{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.tagsForm{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin: 2px;
+}
+
+#homecontainer #chiamaProdotto{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.tagButton{
+    box-shadow:inset 0px 1px 3px 0px #91b8b3;
+    background-color:#a79bb5;
+    border-radius:5px;
+    border:1px solid #566963;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family: 'Raleway', sans-serif;
+    font-size:15px;
+    margin: 3px;
+    padding: 1px;
+    text-decoration:none;
+    text-shadow:0px -1px 0px #2b665e;
+}
+
+.tagButton:hover{
+    background-color:#a96bb8;
 }

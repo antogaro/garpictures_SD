@@ -38,14 +38,13 @@ public class UploadServlet extends HttpServlet {
         String source = fileName;
         File uploads = new File(directory);
         File file = new File(uploads, fileName);
-        String address;
+        String address="WEB-INF/result/caricaProdotto.jsp";;
         Prodotto prodotto = new Prodotto();
         Pattern pattern = Pattern.compile("^[a-zA-Z0-9_\\s]{2,40}$", Pattern.CASE_INSENSITIVE);
         Matcher matcher = pattern.matcher(titolo);
         System.out.println(matcher.matches());
         if (!matcher.matches()) {
             request.setAttribute("errore", "errore nel formato del titolo.");
-            address = "WEB-INF/result/caricaProdotto.jsp";
         } else {
             prodotto.setNome(titolo);
         }
@@ -54,7 +53,6 @@ public class UploadServlet extends HttpServlet {
         System.out.println(matcher.matches());
         if (!matcher.matches()) {
             request.setAttribute("errore", "errore nel formato della descrizione");
-            address = "WEB-INF/result/caricaProdotto.jsp";
         } else {
             prodotto.setDescrizione(descrizione);
         }
@@ -63,7 +61,6 @@ public class UploadServlet extends HttpServlet {
         System.out.println(matcher.matches());
         if (!matcher.matches()) {
             request.setAttribute("errore", "errore nel formato del prezzo");
-            address = "WEB-INF/result/caricaProdotto.jsp";
         } else {
             prodotto.setPrezzo(Float.parseFloat(prezzo));
         }
@@ -72,7 +69,6 @@ public class UploadServlet extends HttpServlet {
         System.out.println(matcher.matches());
         if (!matcher.matches()) {
             request.setAttribute("errore", "errore nel formato dei tag");
-            address = "WEB-INF/result/caricaProdotto.jsp";
         }
 
         if (prodotto.getNome() != null && prodotto.getPrezzo() != 0 && prodotto.getDescrizione() != null) {
@@ -96,12 +92,16 @@ public class UploadServlet extends HttpServlet {
         for (Tag x : tagFinali) {
             filter2.doRelation(x, prodotto);
         }
-        address = "IndexServlet";
+        address = "home";
         request.setAttribute("prodottoCaricato", "prodottoCaricato");
-        }else address ="WEB-INF/result/caricaProdotto.jsp";
-        RequestDispatcher dispatcher = request.getRequestDispatcher(address);
-        dispatcher.forward(request,response);
+        };
 
+        if(address.equals("home")){
+            response.sendRedirect(address);
+        }else{
+            RequestDispatcher dispatcher = request.getRequestDispatcher(address);
+            dispatcher.forward(request,response);
+        }
 
     }
 

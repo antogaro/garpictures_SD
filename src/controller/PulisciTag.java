@@ -16,8 +16,7 @@ public class PulisciTag extends HttpServlet {
           if(request.getParameter("rimuoviTutti").equals("rimuoviTutti")){
               session.removeAttribute("tagsUtente");
           }
-        RequestDispatcher dispatcher = request.getRequestDispatcher("IndexServlet");
-          dispatcher.forward(request,response);
+            response.sendRedirect("home");
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

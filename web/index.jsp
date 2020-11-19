@@ -13,7 +13,7 @@
   <body>
 
   <%
-    String redirectURL = "IndexServlet";
+    String redirectURL = "home";
     response.sendRedirect(redirectURL);
   %>
   </body>

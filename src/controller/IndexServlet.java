@@ -12,8 +12,7 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.*;
 
-@WebServlet("/IndexServlet")
-public class IndexServlet extends HttpServlet {
+@WebServlet(name = "IndexServlet", urlPatterns = {"/home"})public class IndexServlet extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
             doGet(request,response);

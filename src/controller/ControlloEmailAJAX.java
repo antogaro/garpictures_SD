@@ -29,7 +29,6 @@ public class ControlloEmailAJAX extends HttpServlet {
         }
         String json = new Gson().toJson(found);
         response.getWriter().write(json);
-        System.out.println(json);
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

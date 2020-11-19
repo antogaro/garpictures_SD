@@ -39,12 +39,10 @@ public class RicercaPerTag extends HttpServlet {
             if(flag==true){
                 tagsUtente.add(tagDaRimuovere);
             }
-        }else{
-            request.setAttribute("risultato","Nessuna corrispondenza col tag ricercato");
         }
+
         session.setAttribute("tagsUtente",tagsUtente);
-        RequestDispatcher dispatcher = request.getRequestDispatcher("IndexServlet");
-        dispatcher.forward(request,response);
+        response.sendRedirect("home");
 
     }
 

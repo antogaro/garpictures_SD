@@ -12,18 +12,19 @@
         alert("Prodotto aggiunto con successo.");
     </script>
 </c:if>
-<div class="sito" id="homecontainer">
+<div id="homecontainer">
     <c:if test="${not empty sessionScope.tagsUtente}">
 
-    Stai filtrando in base ai seguenti tag:
-    <form action="RicercaPerTag">
+<div id="tagcontainer">
+        <form action="RicercaPerTag" class="tagsForm">
     <c:forEach items="${sessionScope.tagsUtente}" var="tagz">
         <button type="submit" class="tagButton" name="tag" value="${tagz.tag}">-${tagz.tag}</button>
     </c:forEach>
     </form>
-        <form action="PulisciTag" method="post">
+        <form action="PulisciTag" method="post" class="tagsForm">
             <button type="submit" class="tagButton" name="rimuoviTutti" value="rimuoviTutti">x</button>
         </form>
+</div>
         <br/>
         </c:if>
         
@@ -35,12 +36,12 @@
         ${risultato}
     </c:if>
 
-    <form action="ChiamaProdotto" method="post">
+    <form action="ChiamaProdotto" method="post" id="chiamaProdotto">
      <c:forEach items="${prodotti}" var="prodotto">
          <button class="containerImmagini" type="submit" name="prodottoId" value="${prodotto.id}">
              <div class="cartolina">
                  <div id="cartolinafoto">
-             <img src="./img/${prodotto.source}" alt="${prodotto.source}" class="prodottihome">
+             <img src="./img/${prodotto.source}" alt="${prodotto.source}" class="prodottihome" id="immagineProdotto">
                 </div>
                  <div id="cartolinacorsivo">
                          ${prodotto.nome}
@@ -52,5 +53,10 @@
     </form>
 </div>
 </body>
+<script>
+    $(document).ready(function(){
+        $('.cartolina').zoom({magnify: 0.4});
+    });
+</script>
 </html>
 

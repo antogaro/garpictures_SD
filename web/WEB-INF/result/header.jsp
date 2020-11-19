@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="./css/style.css", type="text/css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="./zoom-master/jquery.zoom.js"></script>
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <jsp:useBean id="beanUtente" class="model.Utente" scope="session" />
     <jsp:useBean id="carrello" class="model.Carrello" scope="session" />
@@ -26,7 +27,7 @@
 <body>
 <header>
     <div id="spazio_logo">
-        <a href="IndexServlet"><img src="./sitimg/garpiclogo.png" width="50px" height="50px" alt="logo garpictures"></a>
+        <a href="home"><img src="./sitimg/garpiclogo.png" width="50px" height="50px" alt="logo garpictures"></a>
     </div>
     <div id="spazio_ricerca">
         <form action="RicercaPerTag" method="post" id="inviaTags">
