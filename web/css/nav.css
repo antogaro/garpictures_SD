@@ -24,6 +24,9 @@ header{
     background-color: #bcb8ce;
     border-bottom: 1px solid #917898;
     padding: 0 4%;
+    -webkit-box-shadow: 0px -6px 15px #000000;
+    box-shadow: 0px -6px 15px #000000;
+    z-index: 900;
 
 }
 header #spazio_logo{
@@ -115,15 +118,19 @@ header #hamburger:hover{
         display:flex;
     }
     #menu_mobile{
+        height:0px;
+        overflow: hidden;
+        max-height: 60%;
         font-family: 'Raleway', sans-serif;
-        display:none;
+        display: flex;
         background-color: #bcb8ce;
         justify-content:center;
         transition: height 0.3s ease-in-out;
-        border-bottom: 1px solid #917898;;
+        border-bottom: 1px solid #917898;
+        z-index: 800;
     }
     #menu_mobile.aperto{
-        display:flex;
+        visibility: visible;
     }
     #menu_mobile ul{
         display: flex;

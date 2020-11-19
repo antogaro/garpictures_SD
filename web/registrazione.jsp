@@ -6,43 +6,65 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ include file="/WEB-INF/result/header.jsp" %>
-<div class="sito">
-    <form action="Registrazione" id="registrazione" method="post">
-           <table>
-            <tr>
-            <td>Nome:</td><td><input type="text" name="nome" id="nome" onfocusout="validateName()"></td><td id="erroreNome"></td>
-            </tr>
-               <tr>
-            <td>Cognome:</td><td><input type="text" name="cognome" id="cognome" onfocusout="validateSurname()"></td><td id="erroreCognome"></td>
-               </tr>
-            <tr>
-            <td>Nome utente:</td><td><input type="text" name="nomeUtente" id="nomeUtente" onfocusout="validateUserName()"></td><td id="erroreNomeUtente"></td>
-            </tr>
-               <tr>
-                   <td>Password:</td><td><input type="password" name="password" id="password" onfocusout="validatePassword()"></td><td id="errorePassword"></td>
-               </tr>
-               <tr>
-                   <td>email:</td><td><input type="text" id="email" name="email" onfocusout="validateMail()"></td><td id="erroreMail"></td>
-               </tr>
-               <tr>
-                   <td>Indirizzo:</td>
-               </tr>
-               <tr>
-                   <td>Provincia:</td><td><input type="text" id="provincia" onfocusout="validateProvincia()" name="provincia"></td><td id="erroreProvincia"></td>
-               </tr>
-               <tr>
-                   <td>Citta:</td><td><input type="text" id="citta" onfocusout="validateCitta()" name="citta"></td><td id="erroreCitta"></td>
-               </tr>
-               <tr>
-                   <td>via:</td><td><input type="text" id="via" onfocusout="validateVia()" name="via"></td><td id="erroreVia"></td>
-               </tr>
-               <tr>
-                   <td>telefono:</td><td><input type="text" id="telefono" name="telefono"  onfocusout="validateNumero()"></td><td id="erroreNumero"></td>
-               </tr>
-               <tr>
-                   <td></td><td><input type="submit" id="submitRegistrazione" value="Registrati"></td><td></td>
-               </tr>
-        </table>
+<div id="spazio_registrazione">
+    <h1>
+        Registrazione
+    </h1>
+    <form name="formRegistrazione" id="formRegistrazione" action="Registrazione" method="post">
+        <div class="riga_input">
+            <div class="spazioinput">
+                <input type="text" name="nome" id="nome" placeholder="Nome" onfocusout="validateName()">
+                <p id="erroreNome"></p>
+            </div>
+            <div class="spazioinput">
+                <input type="text" name="cognome" id="cognome" placeholder="Cognome" onfocusout="validateSurname()">
+                <p id="erroreCognome"></p>
+            </div>
+        </div>
+        <div class="riga_input">
+            <div class="spazioinput">
+                <input type="text" name="nomeUtente" id="nomeUtente" placeholder="Nome utente"
+                       onfocusout="validateUserName()">
+                <p id="erroreNomeUtente"></p>
+            </div>
+            <div class="spazioinput">
+                <input type="password" name="password" id="password" placeholder="Password"
+                       onfocusout="validatePassword()">
+                <p id="errorePassword"></p>
+            </div>
+        </div>
+        <div class="riga_input">
+            <div class="spazioinput">
+                <input type="text" id="email" name="email" placeholder="Indirizzo Email" onfocusout="validateMail()">
+                <p id="erroreMail"></p>
+            </div>
+            <div class="spazioinput">
+                <input type="text" id="provincia" onfocusout="validateProvincia()" placeholder="Provincia"
+                       name="provincia">
+                <p id="erroreProvincia"></p>
+            </div>
+        </div>
+        <div class="riga_input">
+            <div class="spazioinput">
+                <input type="text" id="citta" onfocusout="validateCitta()" placeholder="Citta'" name="citta">
+                <p id="erroreCitta"></p>
+            </div>
+            <div class="spazioinput">
+                <input type="text" id="via" onfocusout="validateVia()" placeholder="Via" name="via">
+                <p id="erroreVia"></p>
+            </div>
+        </div>
+        <div class="riga_input">
+            <div class="spazioinput">
+                <input type="text" id="telefono" name="telefono" placeholder="Telefono" onfocusout="validateNumero()">
+                <p id="erroreNumero"></p>
+            </div>
+        </div>
+        <div class="riga_input">
+            <div class="spazioinput">
+                <input type="submit" id="submitRegistrazione" value="Registrati">
+            </div>
+        </div>
     </form>
 </div>
 <c:if test="${errore != null}">
@@ -51,5 +73,6 @@
     </div>
 </c:if>
 </body>
-    <script src="formValidator.js"></script>
+<script src="formValidator.js"></script>
+
 </html>

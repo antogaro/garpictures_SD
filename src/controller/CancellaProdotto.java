@@ -21,10 +21,7 @@ public class CancellaProdotto extends HttpServlet {
         String address;
         String referrer = request.getHeader("referer");
         System.out.println(referrer);
-        if(referrer.equals("http://localhost:8080/Garpictures_war_exploded/ChiamaOperazioneAdmin?operazione=listaProdotti")||referrer.equals("http://localhost:8080/Garpictures_war_exploded/CancellaProdotto"))
-            address="WEB-INF/result/listaProdotti.jsp";
-        else
-            address="IndexServlet";
+        address="WEB-INF/result/listaProdotti.jsp";
         ArrayList<Prodotto> prodotti = filter.doRetriveAll();
         request.setAttribute("prodotti",prodotti);
         RequestDispatcher dispatcher = request.getRequestDispatcher(address);

@@ -124,14 +124,12 @@
 
 body{
     background-color: #e6ecf5;
-}
+     background-image: url("../sitimg/garpiclogin.png");
+     background-repeat: no-repeat;
+     background-position-x: center;
+     background-position-y: 8vh;
+ }
 
-body#login{
-    background-image: url("../sitimg/garpiclogin.png");
-    background-repeat: no-repeat;
-    background-position-x: center;
-    background-position-y: 8vh;
-}
 
 
 .sito{
@@ -200,3 +198,74 @@ body#login{
 .tagButton:hover{
     background-color:#a96bb8;
 }
+
+ #spazio_registrazione{
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-content: center;
+     align-items: center;
+     width: 100%;
+     box-sizing: border-box;
+
+ }
+
+ #spazio_registrazione form{
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-content: center;
+     align-items: center;
+     width: 70%;
+     box-sizing: border-box;
+     background-color: #d6dce4;
+     border: 0px;
+     border-radius: 1.5em;
+     box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+     padding: 30px 3%;
+
+ }
+
+ #spazio_registrazione form .riga_input{
+     display: flex;
+     width: 100%;
+     justify-content: space-between;
+     align-content: flex-start;
+ }
+
+ #spazio_registrazione form .riga_input:last-child{
+     justify-content: center;
+     align-content: center;
+     align-items: center;
+ }
+
+
+ #spazio_registrazione form .riga_input .spazioinput{
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     width: 40%;
+     min-width: 250px;
+     height: 40px;
+     box-sizing: border-box;
+     margin: 30px 0;
+ }
+
+ #spazio_registrazione form .riga_input .spazioinput p{
+     padding:0;
+     margin: 0 auto;
+ }
+
+ #spazio_registrazione form .riga_input .spazioinput input{
+        padding: 10px 20px;
+ }
+
+ @media all and (max-width: 767px){
+     #spazio_registrazione form .riga_input{
+         flex-direction: column;
+         align-items: center;
+         align-content: center;
+         justify-content: center;
+     }
+ }
+

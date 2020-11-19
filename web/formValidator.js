@@ -68,7 +68,6 @@ function validateName() {
         $("#erroreNome").empty();
         validator.nome = true;
     }
-    console.log(re.test(document.getElementById("nome").value));
 }
 
 function validateSurname() {
@@ -239,7 +238,7 @@ function validateFile(){
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-    $("#registrazione").submit(function(e){
+    $("#formRegistrazione").submit(function(e){
         if(validator.email == false || validator.nome == false || validator.cognome == false || validator.nomeUtente == false || validator.provincia == false || validator.citta == false || validator.via == false || validator.numero == false || validator.password == false
             || validator.email == null || validator.nome == null || validator.cognome == null || validator.nomeUtente == null || validator.provincia == null || validator.citta == null || validator.via == null || validator.numero == null || validator.password == null) {
             e.preventDefault();

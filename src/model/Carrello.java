@@ -16,8 +16,6 @@ public class Carrello {
     }
 
     public Carrello(){
-        var filter = new CarrelloDAO();
-        filter.clear();
         this.carrelloProdotti = new ArrayList<Prodotto>();
         this.setTotale();
     }

@@ -116,9 +116,7 @@
             document.getElementById('menu_mobile').style.height = '0';
         } else {
             document.getElementById("menu_mobile").classList.add('aperto');
-            var numItems = $('.item').length;
-            var numItems = numItems * 3;
-            document.getElementById('menu_mobile').style.height = numItems+'%';
+            document.getElementById('menu_mobile').style.height = "25%";
         }
     }
 </script>

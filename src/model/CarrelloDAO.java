@@ -82,17 +82,4 @@ public class CarrelloDAO {
         }
     }
 
-    public void clear() {
-        try (Connection con = ConnessioneDB.getConnection()) {
-            PreparedStatement ps = con.prepareStatement(
-                    "DELETE FROM carrello WHERE prodotto_id=NULL"
-            );
-            ps.executeUpdate();
-
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
-    }
-
-
 }

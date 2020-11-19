@@ -1,7 +1,6 @@
 package controller;
 
-import model.Utente;
-import model.UtenteDAO;
+import model.*;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -114,17 +113,24 @@ public class Registrazione extends HttpServlet {
         }else{
             utente.setPassword(password);
         }
-        System.out.println(utente.getNomeUtente() + utente.getNome() + utente.getCognome() + utente.getCitta() + utente.getPassword() + utente.getIndirizzo()+ utente.getProvincia() + utente.getTelefono() + utente.getEmail());
         if(utente.getNomeUtente() != null && utente.getNome() !=null && utente.getCognome() != null && utente.getPassword() != null && utente.getEmail() != null && utente.getCitta() != null
         && utente.getIndirizzo() != null && utente.getProvincia() != null && utente.getTelefono() != null){
 
+            var filter = new UtenteDAO();
             utente.setVisitatore(false);
             utente.setAmministratore(false);
-            HttpSession session = request.getSession();
-            session.setAttribute("beanUtente",utente);
-            var filter = new UtenteDAO();
             filter.doSave(utente);
             utente.setId(filter.retriveIdByUsername(utente.getNomeUtente()));
+            HttpSession session = request.getSession();
+            session.setAttribute("beanUtente",utente);
+            Carrello carrello = (Carrello) session.getAttribute("carrello");
+            Carrello nuovoCarrello = new Carrello();
+            ArrayList<Prodotto> prodottiCarrelloVisitatore = carrello.getCarrelloProdotti();
+            for(Prodotto x: prodottiCarrelloVisitatore){
+                nuovoCarrello.addProdotto(x,utente);
+            }
+            session.setAttribute("carrello",nuovoCarrello);
+
             address = "home";
         }
 
