@@ -62,7 +62,7 @@
         </div>
         <div class="riga_input">
             <div class="spazioinput">
-                <input type="submit" id="submitRegistrazione" value="Registrati">
+                <input type="submit" id="submitRegistrazione" value="Registrati" class="bottoneRegistrazione">
             </div>
         </div>
     </form>

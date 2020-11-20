@@ -38,6 +38,20 @@
      box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
  }
 
+ .bottoneRegistrazione{
+     width: 25%;
+     min-width: 100px;
+     cursor: pointer;
+     border-radius: 5em;
+     color: #fff;
+     opacity: 1;
+     background: linear-gradient(to right, #aa2222, #2222aa);
+     border: 0;
+     font-family: 'Ubuntu', sans-serif;
+     font-size: 13px;
+     box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+ }
+
  .un:focus, .pass:focus {
      border: 2px solid rgba(0, 0, 0, 0.18) !important;
 
@@ -249,6 +263,10 @@ body{
      height: 40px;
      box-sizing: border-box;
      margin: 30px 0;
+ }
+
+ #spazio_registrazione form .riga_input .spazioinput:last-child{
+     justify-content: center;
  }
 
  #spazio_registrazione form .riga_input .spazioinput p{
