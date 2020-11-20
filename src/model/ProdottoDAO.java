@@ -9,7 +9,7 @@ public class ProdottoDAO {
 
     public Prodotto doRetriveByID(int id){
         try(Connection connection = ConnessioneDB.getConnection()){
-            PreparedStatement preparedStatement = connection.prepareStatement("SELECT id,nome,prezzo,src FROM prodotto WHERE id=?");
+            PreparedStatement preparedStatement = connection.prepareStatement("SELECT id,nome,prezzo,src,descrizione FROM prodotto WHERE id=?");
             preparedStatement.setInt(1,id);
             ResultSet rs = preparedStatement.executeQuery();
             if(rs.next()){
@@ -18,6 +18,7 @@ public class ProdottoDAO {
                 prodotto.setNome(rs.getString(2));
                 prodotto.setPrezzo(rs.getFloat(3));
                 prodotto.setSource(rs.getString(4));
+                prodotto.setDescrizione(rs.getString(5));
                 return prodotto;
             }
             return null;

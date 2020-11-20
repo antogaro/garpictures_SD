@@ -23,8 +23,8 @@
     <form action="SvuotaCarrello" method="post">
         <button type="submit" id="svuotaCarrello">Svuota Carrello</button>
     </form>
-    <form action="SvuotaCarrello" method="post">
-        <button type="submit" id="finalizzaAcquisto">Finalizza acquisto</button>
+    <form action="ChiamaFinalizzaAcquisto" method="get">
+        <button type="submit" id="finalizzaAcquisto" name="fromCarrello" value="true">Finalizza acquisto</button>
     </form>
         <span id="totale">${sessionScope.carrello.totale}</span>
     </div>
@@ -35,6 +35,7 @@
         }
     %>
 </div>
+<%@ include file="/WEB-INF/result/footer.jsp" %>
 </body>
 <script>
     $(document).on("click", "#rimuovi", function() {

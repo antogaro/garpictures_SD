@@ -27,6 +27,7 @@
         </c:if>
     </table>
 </div>
+<%@ include file="/WEB-INF/result/footer.jsp" %>
 </body>
 <script src="formValidatorModifica.js"></script>
 </html>

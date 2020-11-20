@@ -1,4 +1,12 @@
-
+.footer {
+    display: flex;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #a79bb5;
+    height: 200px;
+}
 
  .ilogin {
      width: 76%;
@@ -39,7 +47,7 @@
  }
 
  .bottoneRegistrazione{
-     width: 25%;
+     width: 30%;
      min-width: 100px;
      cursor: pointer;
      border-radius: 5em;
@@ -50,6 +58,7 @@
      font-family: 'Ubuntu', sans-serif;
      font-size: 13px;
      box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+     margin-left: 30%;
  }
 
  .un:focus, .pass:focus {
@@ -61,17 +70,25 @@
      padding-top: 5px;
  }
 
+ #spazio_login{
+     min-height: 700px;
+    display: flex;
+     justify-content: center;
+     align-content: center;
+    align-items: center;
+     position: relative;
+     background-image: url("../sitimg/garpiclogin.png");
+     background-repeat: no-repeat;
+     background-position: center;
+     background-size: 60%;
+ }
+
 .logeen {
-    align-self: center;
+    position: relative;
     background-color: #FFFFFF;
     opacity: 0.9;
     width: 320px;
     height: 300px;
-    position: absolute;
-    left: 50%;
-    margin-left: -160px;
-    top: 50%;
-    margin-top: -150px;
     border-radius: 1.5em;
     box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
 }
@@ -138,12 +155,24 @@
 
 body{
     background-color: #e6ecf5;
-     background-image: url("../sitimg/garpiclogin.png");
-     background-repeat: no-repeat;
-     background-position-x: center;
-     background-position-y: 8vh;
- }
+    height: 100%;
+}
 
+
+html {
+    height: 100%;
+}
+
+#main-wrapper{
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+#content-wrapper{
+    flex: 1;
+    margin: 60px 0px;
+}
 
 
 .sito{
@@ -170,6 +199,12 @@ body{
      border: 0px;
      border-radius: 1.5em;
      box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+}
+
+#homecontainer #spazio_acquisto{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 #tagcontainer{
@@ -213,6 +248,8 @@ body{
     background-color:#a96bb8;
 }
 
+
+
  #spazio_registrazione{
      display: flex;
      flex-direction: column;
@@ -237,7 +274,6 @@ body{
      border-radius: 1.5em;
      box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
      padding: 30px 3%;
-
  }
 
  #spazio_registrazione form .riga_input{
@@ -263,6 +299,11 @@ body{
      height: 40px;
      box-sizing: border-box;
      margin: 30px 0;
+ }
+
+ #spazio_registrazione form .riga_input .spazioinput .input{
+     border: none;
+     border-bottom: 1px solid #a79bb5;
  }
 
  #spazio_registrazione form .riga_input .spazioinput:last-child{

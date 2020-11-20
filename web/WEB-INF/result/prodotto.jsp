@@ -13,8 +13,9 @@
             ${prodotto.nome} <br/>
             ${prodotto.prezzo} &euro; <br/>
                 <div id="bottoniCarrello">
-
-            <button class="pagProdotto" value="Acquista" id="acquista" value="acquista1">Acquista</button> <br/>
+            <form action="ChiamaFinalizzaAcquisto" method="get">
+            <button type="submit" class="pagProdotto" name="acquista" id="acquista" value="${prodotto.id}">Acquista</button> <br/>
+            </form>
                     <%
                         Prodotto prodotto = (Prodotto) request.getAttribute("prodotto");
                         if(!carrello.isProdottoIn(prodotto)){
@@ -55,6 +56,7 @@
         </div>
     </div>
 </div>
+<%@ include file="/WEB-INF/result/footer.jsp" %>
 </body>
 <script>
     $(document).on("click", "#aggiungi", function() {

@@ -20,5 +20,6 @@
     </c:forEach>
     </form>
 </div>
+<%@ include file="/WEB-INF/result/footer.jsp" %>
 </body>
 </html>

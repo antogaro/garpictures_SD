@@ -24,5 +24,6 @@
         </c:if>
     </table>
 </div>
+<%@ include file="/WEB-INF/result/footer.jsp" %>
 </body>
 </html>
