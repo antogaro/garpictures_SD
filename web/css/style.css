@@ -80,7 +80,7 @@
      background-image: url("../sitimg/garpiclogin.png");
      background-repeat: no-repeat;
      background-position: center;
-     background-size: 60%;
+     background-size: 38%;
  }
 
 .logeen {
@@ -171,7 +171,7 @@ html {
 
 #content-wrapper{
     flex: 1;
-    margin: 60px 0px;
+    padding: 60px 0px;
 }
 
 

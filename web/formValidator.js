@@ -237,6 +237,35 @@ function validateFile(){
         }
 }
 
+function validateCVV(){
+    const re = /^[0-9]{3}$/;
+    if(!re.test(document.getElementById("tagsDaInserire").value)) {
+        text = "Formato cvv non valido."
+        $("#erroreCVV").empty();
+        $("#erroreCVV").append(text);
+        $("#CVV").css("background-color", "#ffc0ad");
+        validator.cvv = false;
+    }else{
+        $("#CVV").css("background-color", "#ffffff");
+        $("#erroreCVV").empty();
+        validator.cvv = true;
+    }
+}
+
+function validateCarta(){
+    const re = /^\d{4}([ \-]?)((\d{6}\1?\d{5})|(\d{4}\1?\d{4}\1?\d{4}))$/;
+    if(!re.test(document.getElementById("tagsDaInserire").value)) {
+        text = "Formato carta non valido."
+        $("#erroreCarta").empty();
+        $("#erroreCarta").append(text);
+        $("#carta").css("background-color", "#ffc0ad");
+        validator.carta = false;
+    }else{
+        $("#carta").css("background-color", "#ffffff");
+        $("#erroreCarta").empty();
+        validator.carta = true;
+    }
+}
 document.addEventListener("DOMContentLoaded", function() {
     $("#formRegistrazione").submit(function(e){
         if(validator.email == false || validator.nome == false || validator.cognome == false || validator.nomeUtente == false || validator.provincia == false || validator.citta == false || validator.via == false || validator.numero == false || validator.password == false
@@ -255,11 +284,6 @@ document.addEventListener("DOMContentLoaded", function() {
     })
 
     $("#caricaProdotto").submit(function (e) {
-        console.log("titolo"+validator.titolo);
-        console.log("descrizione"+validator.descrizione);
-        console.log("prezzo"+validator.prezzo);
-        console.log("tag"+validator.tag);
-        console.log("file"+validator.file);
         if(validator.titolo == false || validator.descrizione == false || validator.prezzo == false || validator.file == false || validator.tag == false
             || validator.titolo == null  || validator.descrizione == null || validator.prezzo == null || validator.file == null || validator.tag == null){
             e.preventDefault();
@@ -268,6 +292,22 @@ document.addEventListener("DOMContentLoaded", function() {
             validatePrezzo();
             validateTag();
             validateFile();
+        }
+    })
+
+    $("#completaPagamento").submit(function (e) {
+        e.preventDefault();
+        console.log("titolo"+validator.titolo);
+        console.log("descrizione"+validator.descrizione);
+        console.log("prezzo"+validator.prezzo);
+        console.log("tag"+validator.tag);
+        console.log("file"+validator.file);
+        if(validator.mail == false || validator.mail == null || validator.cvv == false ||
+            validator.cvv == null || validator.carta == false || validator.carta == null){
+            e.preventDefault();
+            validateMail();
+            validateCVV();
+            validateCarta();
         }
     })
 });
