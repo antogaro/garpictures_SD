@@ -39,14 +39,34 @@
     <div id="spazio_finalizza">
         <p>Totale: <fmt:formatNumber type="number" maxFractionDigits="2" minFractionDigits="2"
                                      value="${total}"/>&euro;</p>
-        <div id="spazio_info_pagamento">
-            <input type="text" placeholder="Numero carta">
-            <input type="text" placeholder="CVV">
-        </div>
-        <button id="finalizzaAcquisto">Completa acquisto</button>
+        <form action="CompletaPagamento" method="post" name ="completaPagamento" id="completaPagamento">
+            <div id="spazio_info_pagamento">
+                <c:if test="${beanUtente.visitatore == true}">
+                    <div class="campoInput">
+                        <input type="text" placeholder="email" id="email" onfocusout="validateMail()">
+                        <p id="erroreMail"></p>
+                    </div>
+                </c:if>
+                <c:if test="${beanUtente.visitatore == false}">
+                    <div class="campoInput">
+                        <input type="text" placeholder="${beanUtente.email}" readonly>
+                    </div>
+                </c:if>
+                <div class="campoInput">
+                    <input type="text" placeholder="Numero carta" id="carta" onfocusout="validateCarta()">
+                    <p id="erroreCarta"></p>
+                </div>
+                <div class="campoInput">
+                    <input type="text" placeholder="CVV" id="CVV" onfocusout="validateCVV()">
+                    <p id="erroreCVV"></p>
+                </div>
+            </div>
+            <button>Completa acquisto</button>
+        </form>
     </div>
 </div>
 </div>
 <%@ include file="/WEB-INF/result/footer.jsp" %>
 </body>
+<script src="formValidator.js"></script>
 </html>

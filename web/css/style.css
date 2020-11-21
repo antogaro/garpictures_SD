@@ -229,7 +229,7 @@ html {
 
 #content-wrapper{
     flex: 1;
-    margin: 60px 0px;
+    padding: 60px 0px;
 }
 
 
@@ -306,6 +306,8 @@ html {
 .tagButton:hover{
     background-color:#a96bb8;
 }
+
+
 
  #spazio_registrazione{
      display: flex;
