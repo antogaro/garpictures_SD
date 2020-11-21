@@ -34,9 +34,20 @@
 }
 
 #bottoniCarrello {
-    width: 60%;
-    align-self: center;
-    justify-content: space-between;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+
+.prodottiWrapper{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    align-content: center;
 }
 
 .bottonelogin {
@@ -434,6 +445,27 @@ html {
     align-self: center;
 }
 
+.carrelloWrapper{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#carrelloContainer #prodottoCarrello{
+    width: 100%;
+    height: auto;
+    max-width: 490px;
+}
+
+#carrelloContainer #spazioRimuoviCarrello{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    height: 60%;
+}
+
 .spazioregistrazione form .riga_input .spazioinput .input {
     border: none;
     border-bottom: 1px solid #a79bb5;
@@ -469,5 +501,11 @@ html {
 @media all and (max-width: 1024px) {
     #homecontainer #spazio_finalizza #completaPagamento #spazio_info_pagamento {
         flex-direction: column;
+    }
+}
+
+@media all and (max-width: 710px) {
+    #carrelloContainer #spazioRimuoviCarrello{
+        justify-content: flex-start;
     }
 }
