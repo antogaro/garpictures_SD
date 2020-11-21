@@ -13,7 +13,7 @@
             <div class="spazio_prodotto">
                 <img src="./img/${prodotto.source}" width="150px" height="auto">
                 <div class="spazio_infoProdotto">
-                    <p>${prodotto.nome}</p>
+                    <h2>${prodotto.nome}</h2>
                     <p>${prodotto.descrizione}</p>
                 </div>
                 <p><fmt:formatNumber type="number" maxFractionDigits="2" minFractionDigits="2"

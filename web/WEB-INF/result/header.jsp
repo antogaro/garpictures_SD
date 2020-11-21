@@ -82,49 +82,54 @@
         </ul>
     </nav>
     <div id="content-wrapper">
-    <script>
-        var tags = [];
-        var tags2 = [];
-        $(document).on("click", "#tags", function () {
-            $.post("AutocompleteAJAX", {},
-                function (responseJson) {
-                    tags = JSON.parse(responseJson);
-                    $("#tags").autocomplete({
-                        source: tags
+        <script>
+            var tags = [];
+            var tags2 = [];
+            $(document).on("click", "#tags", function () {
+                $.post("AutocompleteAJAX", {},
+                    function (responseJson) {
+                        tags = JSON.parse(responseJson);
+                        $("#tags").autocomplete({
+                            source: tags
+                        });
                     });
-                });
-        });
-        document.addEventListener("DOMContentLoaded", function () {
-            $("#inviaTags").submit(function (e) {
-                tags.forEach(function (item, index) {
-                    tags2.push(item.substring(1));
-                });
-                var contenuto = $("#tags").val();
-                if (!contenuto || jQuery.inArray(contenuto, tags2) == -1) {
-                    if (jQuery.inArray(contenuto, tags) == -1) {
-                        e.preventDefault();
+            });
+            document.addEventListener("DOMContentLoaded", function () {
+                $("#inviaTags").submit(function (e) {
+                    tags.forEach(function (item, index) {
+                        tags2.push(item.substring(1));
+                    });
+                    var contenuto = $("#tags").val();
+                    if (!contenuto || jQuery.inArray(contenuto, tags2) == -1) {
+                        if (jQuery.inArray(contenuto, tags) == -1) {
+                            e.preventDefault();
+                        }
                     }
-                }
-            })
-        });
-        $(function () {
-            $(".toggle").on("click", function () {
-                if ($(".item").hasClass("active")) {
-                    $(".item").removeClass("active");
-                } else {
-                    $(".item").addClass("active");
-                }
+                })
+            });
+            $(function () {
+                $(".toggle").on("click", function () {
+                    if ($(".item").hasClass("active")) {
+                        $(".item").removeClass("active");
+                    } else {
+                        $(".item").addClass("active");
+                    }
+                })
+
             })
 
-        })
+            $(document).ready(function(){
+                $("#hamburger").click(function(){
+                    if($("#menu_mobile").height()>0){
+                        $("#menu_mobile").animate({
+                            height: '0px'
+                        });
+                    }else{
+                        $("#menu_mobile").animate({
+                            height: '150px'
+                        });
+                    }
 
-        function apriMenu() {
-            if (document.getElementById("menu_mobile").classList.contains('aperto')) {
-                document.getElementById("menu_mobile").classList.remove('aperto');
-                document.getElementById('menu_mobile').style.height = '0';
-            } else {
-                document.getElementById("menu_mobile").classList.add('aperto');
-                document.getElementById('menu_mobile').style.height = "25%";
-            }
-        }
-    </script>
+                });
+            });
+        </script>

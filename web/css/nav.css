@@ -120,15 +120,11 @@ header #hamburger:hover{
         max-height: 60%;
         font-family: 'Raleway', sans-serif;
         display: flex;
-        background-color: #bcb8ce;
         justify-content:center;
-        transition: height 0.3s ease-in-out;
-        border-bottom: 1px solid #917898;
-        z-index: 800;
+        background-color: #E6ECF5;
+        border-bottom: 1px solid #E4EAF3;
     }
-    #menu_mobile.aperto{
-        visibility: visible;
-    }
+
     #menu_mobile ul{
         display: flex;
         flex-direction: column;
