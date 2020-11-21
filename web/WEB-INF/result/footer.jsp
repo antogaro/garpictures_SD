@@ -7,7 +7,11 @@
 --%>
 </div>
 <div class="footer">
-    <p>Footer</p>
+    <p align="center">
+    Contatti: <a href="NULL">a.garofalo33@studenti.unisa.it</a>, <a href="NULL">c.maio9@studenti.unisa.it</a> <br>
+    Garpictures: un sito su cui poter acquistare ogni tipo di immagini in modo rapido e sicuro.<br>
+        Eventi in programma: Il 23/11/2020 presenteremo per la prima volta il sito!<br>
+    </p>
 </div>
 <%--
 chiudo main wrapper e content wrapper

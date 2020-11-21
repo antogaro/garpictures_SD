@@ -13,7 +13,6 @@
 <c:forEach items="${carrello.carrelloProdotti}" var="prodotto">
     <div class="sito" id="${prodotto.nome}">
         <img src="./img/${prodotto.source}" class="prodotti">
-        ${prodotto.nome}
         <button type="button" class="pagProdotto" name="prodottoId" value="${prodotto.id}" id="rimuovi">Rimuovi dal carrello</button>
     </div>
 </c:forEach>
@@ -26,11 +25,11 @@
     <form action="ChiamaFinalizzaAcquisto" method="get">
         <button type="submit" id="finalizzaAcquisto" name="fromCarrello" value="true">Finalizza acquisto</button>
     </form>
-        <span id="totale">${sessionScope.carrello.totale}</span>
+        <span id="totale">Totale: ${sessionScope.carrello.totale} euro. </span>
     </div>
     <%}else{
     %>
-    <div class="sito">Il tuo carrello è vuoto.</div>
+    <div>Non hai alcun prodotto nel carrello.</div>
     <%
         }
     %>
@@ -48,7 +47,7 @@
                 $("#totale").text(totale.toFixed(2)+"€");
                 if(totale == 0){
                     $("#bottoniCarrello").empty();
-                    $("#bottoniCarrello").text("Il carrello è vuoto.")
+                    $("#bottoniCarrello").text("Non hai alcun prodotto nel carrello.")
                 }
             });
     });

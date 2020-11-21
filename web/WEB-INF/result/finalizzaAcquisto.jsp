@@ -43,7 +43,7 @@
             <input type="text" placeholder="Numero carta">
             <input type="text" placeholder="CVV">
         </div>
-        <button>Completa acquisto</button>
+        <button id="finalizzaAcquisto">Completa acquisto</button>
     </div>
 </div>
 </div>

@@ -13,7 +13,7 @@
             <td> Titolo prodotto:</td><td><input type="text" name="titolo" id="titolo" onfocusout="validateTitolo()"></td><td id="erroreTitolo"></td>
             </tr>
             <tr>
-                <td>Descrizione prodotto:</td><td> <textarea name="descrizione" id="descrizione" rows="3" cols="40" onfocusout="validateDescrizione()">Una breve descrizione del prodotto.</textarea><td><td id="erroreDescrizione"></td>
+                <td>Descrizione prodotto:</td><td> <textarea name="descrizione" id="descrizione" rows="3" cols="40" onfocusout="validateDescrizione()" placeholder="Una breve descrizione del prodotto."></textarea><td><td id="erroreDescrizione"></td>
             </tr>
             <tr>
                 <td> Inserisci il prezzo:</td> <td><input type="text" name="prezzo" id="prezzo" onfocusout="validatePrezzo()"></td><td id="errorePrezzo"></td>

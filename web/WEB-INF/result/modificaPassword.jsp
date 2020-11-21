@@ -7,7 +7,7 @@
 --%>
 <%@ include file="/WEB-INF/result/header.jsp" %>
 <body>
-<div class="sito">
+<div class="sito" id="homecontainer">
     <table>
         <form action="ModificaPassword" method="post" id="modificaPassword">
             <tr>

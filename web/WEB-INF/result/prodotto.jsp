@@ -9,7 +9,7 @@
 <div class="sito">
     <div class="sito" id="divProdotto">
     <img src="./img/${prodotto.source}" class="prodotti">
-        <div>
+        <div id="prodottettag">
             ${prodotto.nome} <br/>
             ${prodotto.prezzo} &euro; <br/>
                 <div id="bottoniCarrello">

@@ -4,8 +4,12 @@
     bottom: 0;
     width: 100%;
     text-align: center;
-    background-color: #a79bb5;
+    background: linear-gradient(to bottom, #8AA7CF, #5D85BD);
     height: 200px;
+    box-shadow: 0px -2px 5px #858585;
+    justify-content: center;
+    padding-top: 20px;
+    font-size: 11px;
 }
 
  .ilogin {
@@ -27,6 +31,12 @@
      text-align: center;
      margin-bottom: 27px;
      font-family: 'Ubuntu', sans-serif;
+ }
+
+ #bottoniCarrello{
+     width: 60%;
+     align-self: center;
+     justify-content: space-between;
  }
 
  .bottonelogin {
@@ -61,6 +71,42 @@
      margin-left: 30%;
  }
 
+ #rimuovi, #svuotaCarrello, button[name="bandisci"], button[name="prodotto"]{
+     padding: 5px;
+     margin: 5px;
+     cursor: pointer;
+     border-radius: 5em;
+     font-family: 'Ubuntu', sans-serif;
+     font-size: 13px;
+     box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+     background-color: #EACCD9;
+     border: 0;
+ }
+
+#acquista, #finalizzaAcquisto, #submitProdotto, button[name="promuovi"], #submitEmail, #submitCambiaIndirizzo, #submitCambiaPassword{
+    padding: 5px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5em;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 13px;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+    background-color: #CCEACF;
+    border: 0;
+}
+
+#aggiungi, button[name="revoca"], button[name="modificaIndirizzo"], button[name="modificaPassword"], button[name="modificaEmail"], button[name="operazione"]{
+    margin: 5px;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 5em;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 13px;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+    background-color: #EADECC;
+    border: 0;
+}
+
  .un:focus, .pass:focus {
      border: 2px solid rgba(0, 0, 0, 0.18) !important;
 
@@ -80,7 +126,7 @@
      background-image: url("../sitimg/garpiclogin.png");
      background-repeat: no-repeat;
      background-position: center;
-     background-size: 60%;
+     background-size: 600px 600px;
  }
 
 .logeen {
@@ -91,6 +137,18 @@
     height: 300px;
     border-radius: 1.5em;
     box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+}
+
+#prodottettag{
+    justify-content: center;
+}
+
+#divProdotto{
+    background-color: white;
+    justify-content: space-between;
+    box-shadow: 10px 10px 5px #aaaaaa;
+    border: none;
+    border-radius: 0em;
 }
 
 .entra {
@@ -154,7 +212,7 @@
 }
 
 body{
-    background-color: #e6ecf5;
+    background-color: #CEDAEB;
     height: 100%;
 }
 
@@ -177,15 +235,16 @@ html {
 
 .sito{
     display: flex;
-    border: 1px solid black;
     justify-content: center;
     padding: 18px;
     margin-left: 20px;
     margin-right: 20px;
     margin-top: 10px;
-    margin-bot: 10px;
-    background-color: bisque;
+    margin-bottom: 20px;
+    background-color: #E6ECF5;
     flex-wrap: wrap;
+    border-radius: 1.5em;
+    box-shadow: 0px 11px 25px 2px rgba(0,0,0,0.14)
 }
 
 #homecontainer{
@@ -195,7 +254,7 @@ html {
     flex-wrap: wrap;
      padding: 1%;
      margin: 1%;
-     background-color: #d6dce4;
+     background-color: #E6ECF5;
      border: 0px;
      border-radius: 1.5em;
      box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
@@ -248,8 +307,6 @@ html {
     background-color:#a96bb8;
 }
 
-
-
  #spazio_registrazione{
      display: flex;
      flex-direction: column;
@@ -269,7 +326,7 @@ html {
      align-items: center;
      width: 70%;
      box-sizing: border-box;
-     background-color: #d6dce4;
+     background-color: #E6ECF5;
      border: 0px;
      border-radius: 1.5em;
      box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);

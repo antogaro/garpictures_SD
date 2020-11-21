@@ -6,8 +6,8 @@
   To change this template use File | Settings | File Templates.
 --%>
     <%@ include file="/WEB-INF/result/header.jsp" %>
-<div class="sito">
-    <p>Benvenuto, amministratore ${sessionScope.beanUtente.nome}</p>.
+<div class="sito" id="homecontainer">
+    <p>Benvenuto, amministratore ${sessionScope.beanUtente.nome}.</p>
 
     <table>
         <tr>

@@ -6,13 +6,15 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ include file="/WEB-INF/result/header.jsp" %>
-<div class="sito">
+<div class="sito" id="homecontainer">
     <table>
         <form action="ModificaEmail" method="post" id="modificaEmail">
-        <tr>
-        <td>Inserisci il nuovo indirizzo email:</td><td><input type="text" name="nuovaEmail" id="nuovaEmail" onfocusout="validateMail()"></td>
+            <div class="riga_input">
+                <div class="spazioinput">
+                    Inserisci il nuovo indirizzo email:</td><td><input type="text" name="nuovaEmail" id="nuovaEmail" onfocusout="validateMail()"></td>
             <td><input type="submit" value="cambia email" id="submitEmail" name="submitEmail"></td>
-        </tr>
+                </div>
+            </div>
         </form>
         <tr>
             <td id="erroreMail"></td>

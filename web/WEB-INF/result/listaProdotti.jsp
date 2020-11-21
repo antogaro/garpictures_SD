@@ -12,11 +12,13 @@
 <div class="sito">
     <form action="CancellaProdotto" method="post">
     <c:forEach items="${prodotti}" var="prodotto">
-        <div>
-                ${prodotto.nome}
+        <div class="sito" id="divProdotto">
             <img src="./img/${prodotto.source}" class="prodotti">
+                <div id="prodottettag">
+                        ${prodotto.nome} <br/>
+                <button type="submit" name="prodotto" value="${prodotto.id}">Elimina prodotto</button>
+                </div>
         </div>
-        <button type="submit" name="prodotto" value="${prodotto.id}">Elimina prodotto</button>
     </c:forEach>
     </form>
 </div>

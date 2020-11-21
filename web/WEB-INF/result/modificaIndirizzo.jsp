@@ -6,7 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ include file="/WEB-INF/result/header.jsp" %>
-<div class="sito">
+<div class="sito" id="homecontainer">
     <table>
         <form action="CambiaIndirizzo" method="post" id="modificaIndirizzo">
             <tr>
