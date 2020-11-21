@@ -19,7 +19,7 @@
                 <td>Inserisci la nuova via:</td><td><input type="text" name="nuovaVia" id="nuovaVia" onfocusout="validateNuovaVia()"></td><td id="erroreNuovaVia"></td>
             </tr>
             <tr>
-                <td><input type="submit" value="Cambia indirizzo" id="submitCambiaIndirizzo"></td>
+                <td><input type="submit"  class="siteButtons2" value="Cambia indirizzo" id="submitCambiaIndirizzo"></td>
             </tr>
         </form>
         <c:if test="${errore != null}">
@@ -31,4 +31,5 @@
 </div>
 <%@ include file="/WEB-INF/result/footer.jsp" %>
 </body>
+<script src="formValidatorModifica.js"></script>
 </html>

@@ -25,7 +25,7 @@
                 <td>Carica file(PNG/JPEG):</td><td><input type="file" name="prodotto" accept="image/png, image/jpeg" id="prodotto" onchange="validateFile()"></td><td id="erroreInserimento"></td>
             </tr>
             <tr>
-                <td><input type="submit" value="Aggiungi prodotto" name="submitProdotto" id="submitProdotto"></td>
+                <td><input type="submit" value="Aggiungi prodotto" class="siteButtons2" name="submitProdotto" id="submitProdotto"></td>
             </tr>
         </table>
 

@@ -43,25 +43,25 @@
             <div id="spazio_info_pagamento">
                 <c:if test="${beanUtente.visitatore == true}">
                     <div class="campoInput">
-                        <input type="text" placeholder="email" id="email" onfocusout="validateMail()">
+                        <input type="text" placeholder="email" id="email" name="email" onfocusout="validateMailAcquisto()">
                         <p id="erroreMail"></p>
                     </div>
                 </c:if>
                 <c:if test="${beanUtente.visitatore == false}">
                     <div class="campoInput">
-                        <input type="text" placeholder="${beanUtente.email}" readonly>
+                        <input type="text" id="emailUtente" name="email" value="${beanUtente.email}" readonly>
                     </div>
                 </c:if>
                 <div class="campoInput">
-                    <input type="text" placeholder="Numero carta" id="carta" onfocusout="validateCarta()">
+                    <input type="text" placeholder="Numero carta" id="carta" name="carta" onfocusout="validateCarta()">
                     <p id="erroreCarta"></p>
                 </div>
                 <div class="campoInput">
-                    <input type="text" placeholder="CVV" id="CVV" onfocusout="validateCVV()">
+                    <input type="text" placeholder="CVV" id="CVV" name="CVV" onfocusout="validateCVV()">
                     <p id="erroreCVV"></p>
                 </div>
             </div>
-            <button>Completa acquisto</button>
+            <button type="submit" class="siteButtons2">Completa acquisto</button>
         </form>
     </div>
 </div>

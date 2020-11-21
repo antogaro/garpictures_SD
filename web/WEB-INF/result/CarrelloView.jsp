@@ -13,17 +13,17 @@
 <c:forEach items="${carrello.carrelloProdotti}" var="prodotto">
     <div class="sito" id="${prodotto.nome}">
         <img src="./img/${prodotto.source}" class="prodotti">
-        <button type="button" class="pagProdotto" name="prodottoId" value="${prodotto.id}" id="rimuovi">Rimuovi dal carrello</button>
+        <button type="button" class="siteButtons" name="prodottoId" value="${prodotto.id}" id="rimuovi">Rimuovi dal carrello</button>
     </div>
 </c:forEach>
     <div id="carrelloVuoto">
     </div>
     <div id="bottoniCarrello">
     <form action="SvuotaCarrello" method="post">
-        <button type="submit" id="svuotaCarrello">Svuota Carrello</button>
+        <button  class="siteButtons" type="submit" id="svuotaCarrello">Svuota Carrello</button>
     </form>
     <form action="ChiamaFinalizzaAcquisto" method="get">
-        <button type="submit" id="finalizzaAcquisto" name="fromCarrello" value="true">Finalizza acquisto</button>
+        <button type="submit" class="siteButtons2" id="finalizzaAcquisto" name="fromCarrello" value="true">Finalizza acquisto</button>
     </form>
         <span id="totale">Totale: ${sessionScope.carrello.totale} euro. </span>
     </div>

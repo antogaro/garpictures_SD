@@ -12,7 +12,7 @@
             <div class="riga_input">
                 <div class="spazioinput">
                     Inserisci il nuovo indirizzo email:</td><td><input type="text" name="nuovaEmail" id="nuovaEmail" onfocusout="validateMail()"></td>
-            <td><input type="submit" value="cambia email" id="submitEmail" name="submitEmail"></td>
+            <td><input type="submit" class="siteButtons3" value="cambia email" id="submitEmail" name="submitEmail"></td>
                 </div>
             </div>
         </form>
@@ -28,4 +28,5 @@
 </div>
 <%@ include file="/WEB-INF/result/footer.jsp" %>
 </body>
+<script src="formValidatorModifica.js"></script>
 </html>

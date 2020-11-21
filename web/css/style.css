@@ -12,78 +12,79 @@
     font-size: 11px;
 }
 
- .ilogin {
-     width: 76%;
-     color: rgb(38, 50, 56);
-     opacity: 1;
-     font-weight: 700;
-     font-size: 14px;
-     letter-spacing: 1px;
-     background: rgba(136, 126, 126, 0.04);
-     padding: 10px 20px;
-     border: none;
-     border-radius: 20px;
-     outline: none;
-     box-sizing: border-box;
-     border: 2px solid rgba(0, 0, 0, 0.02);
-     margin-bottom: 50px;
-     margin-left: 46px;
-     text-align: center;
-     margin-bottom: 27px;
-     font-family: 'Ubuntu', sans-serif;
- }
+.ilogin {
+    width: 76%;
+    color: rgb(38, 50, 56);
+    opacity: 1;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 1px;
+    background: rgba(136, 126, 126, 0.04);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    box-sizing: border-box;
+    border: 2px solid rgba(0, 0, 0, 0.02);
+    margin-bottom: 50px;
+    margin-left: 46px;
+    text-align: center;
+    margin-bottom: 27px;
+    font-family: 'Ubuntu', sans-serif;
+}
 
- #bottoniCarrello{
-     width: 60%;
-     align-self: center;
-     justify-content: space-between;
- }
+#bottoniCarrello {
+    width: 60%;
+    align-self: center;
+    justify-content: space-between;
+}
 
- .bottonelogin {
-     cursor: pointer;
-     border-radius: 5em;
-     color: #fff;
-     opacity: 1;
-     background: linear-gradient(to right, #aa2222, #2222aa);
-     border: 0;
-     padding-left: 40px;
-     padding-right: 40px;
-     padding-bottom: 10px;
-     padding-top: 10px;
-     font-family: 'Ubuntu', sans-serif;
-     margin-left: 35%;
-     font-size: 13px;
-     box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
- }
+.bottonelogin {
+    cursor: pointer;
+    border-radius: 5em;
+    color: #fff;
+    opacity: 1;
+    background: linear-gradient(to right, #aa2222, #2222aa);
+    border: 0;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-family: 'Ubuntu', sans-serif;
+    margin-left: 35%;
+    font-size: 13px;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+}
 
- .bottoneRegistrazione{
-     width: 30%;
-     min-width: 100px;
-     cursor: pointer;
-     border-radius: 5em;
-     color: #fff;
-     opacity: 1;
-     background: linear-gradient(to right, #aa2222, #2222aa);
-     border: 0;
-     font-family: 'Ubuntu', sans-serif;
-     font-size: 13px;
-     box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
-     margin-left: 30%;
- }
+.bottoneRegistrazione {
+    width: 30%;
+    min-width: 100px;
+    cursor: pointer;
+    border-radius: 5em;
+    color: #fff;
+    opacity: 1;
+    background: linear-gradient(to right, #aa2222, #2222aa);
+    border: 0;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 13px;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+    margin-left: 30%;
+}
 
- #rimuovi, #svuotaCarrello, button[name="bandisci"], button[name="prodotto"]{
-     padding: 5px;
-     margin: 5px;
-     cursor: pointer;
-     border-radius: 5em;
-     font-family: 'Ubuntu', sans-serif;
-     font-size: 13px;
-     box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
-     background-color: #EACCD9;
-     border: 0;
- }
 
-#acquista, #finalizzaAcquisto, #submitProdotto, button[name="promuovi"], #submitEmail, #submitCambiaIndirizzo, #submitCambiaPassword{
+.siteButtons{
+    padding: 5px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5em;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 13px;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+    background-color: #EACCD9;
+    border: 0;
+}
+
+.siteButtons2{
     padding: 5px;
     margin: 5px;
     cursor: pointer;
@@ -95,7 +96,7 @@
     border: 0;
 }
 
-#aggiungi, button[name="revoca"], button[name="modificaIndirizzo"], button[name="modificaPassword"], button[name="modificaEmail"], button[name="operazione"]{
+.siteButtons3{
     margin: 5px;
     padding: 5px;
     cursor: pointer;
@@ -107,27 +108,27 @@
     border: 0;
 }
 
- .un:focus, .pass:focus {
-     border: 2px solid rgba(0, 0, 0, 0.18) !important;
+.un:focus, .pass:focus {
+    border: 2px solid rgba(0, 0, 0, 0.18) !important;
 
- }
+}
 
- form.loginform {
-     padding-top: 5px;
- }
+form.loginform {
+    padding-top: 5px;
+}
 
- #spazio_login{
-     min-height: 700px;
+#spazio_login {
+    min-height: 700px;
     display: flex;
-     justify-content: center;
-     align-content: center;
+    justify-content: center;
+    align-content: center;
     align-items: center;
-     position: relative;
-     background-image: url("../sitimg/garpiclogin.png");
-     background-repeat: no-repeat;
-     background-position: center;
-     background-size: 600px 600px;
- }
+    position: relative;
+    background-image: url("../sitimg/garpiclogin.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 600px 600px;
+}
 
 .logeen {
     position: relative;
@@ -139,11 +140,11 @@
     box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
 }
 
-#prodottettag{
+#prodottettag {
     justify-content: center;
 }
 
-#divProdotto{
+#divProdotto {
     background-color: white;
     justify-content: space-between;
     box-shadow: 10px 10px 5px #aaaaaa;
@@ -160,46 +161,46 @@
     font-size: 23px;
 }
 
-.prodotti{
+.prodotti {
     max-width: 800px;
     max-height: 800px;
     min-width: 300px;
     min-height: 300px;
 }
 
- .prodottihome{
-     height: auto;
-     width: auto;
-     max-width: 360px;
-     max-height: border-box;
- }
+.prodottihome {
+    height: auto;
+    width: auto;
+    max-width: 360px;
+    max-height: border-box;
+}
 
- .cartolina {
-     width: 284px;
-     padding: 10px 10px 25px 10px;
-     overflow: hidden;
-     background-color: white;
-     box-shadow: 10px 10px 5px #aaaaaa;
- }
+.cartolina {
+    width: 284px;
+    padding: 10px 10px 25px 10px;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 10px 10px 5px #aaaaaa;
+}
 
- #cartolinafoto{
-     width:auto;
-     min-width: 230px;
-     min-height: 230px;
-     max-height: 230px;
-     overflow: hidden;
- }
+#cartolinafoto {
+    width: auto;
+    min-width: 230px;
+    min-height: 230px;
+    max-height: 230px;
+    overflow: hidden;
+}
 
- #cartolinacorsivo{
-     font-family: Forte;
-     font-weight: bolder;
-     font-size: large;
-     transform: rotate(-11deg);
-     float: right;
-     padding-right: 20px;
- }
+#cartolinacorsivo {
+    font-family: Forte;
+    font-weight: bolder;
+    font-size: large;
+    transform: rotate(-11deg);
+    float: right;
+    padding-right: 20px;
+}
 
-.containerImmagini{
+.containerImmagini {
     background-repeat: no-repeat;
     background-size: auto;
     border: none;
@@ -207,11 +208,11 @@
     margin: 10px;
 }
 
-.containerImmagini:hover{
+.containerImmagini:hover {
     cursor: pointer;
 }
 
-body{
+body {
     background-color: #CEDAEB;
     height: 100%;
 }
@@ -221,19 +222,19 @@ html {
     height: 100%;
 }
 
-#main-wrapper{
+#main-wrapper {
     display: flex;
     flex-direction: column;
     min-height: 100%;
 }
 
-#content-wrapper{
+#content-wrapper {
     flex: 1;
     padding: 60px 0px;
 }
 
 
-.sito{
+.sito {
     display: flex;
     justify-content: center;
     padding: 18px;
@@ -244,29 +245,29 @@ html {
     background-color: #E6ECF5;
     flex-wrap: wrap;
     border-radius: 1.5em;
-    box-shadow: 0px 11px 25px 2px rgba(0,0,0,0.14)
+    box-shadow: 0px 11px 25px 2px rgba(0, 0, 0, 0.14)
 }
 
-#homecontainer{
+#homecontainer {
     display: flex;
     justify-content: center;
     flex-direction: column;
     flex-wrap: wrap;
-     padding: 1%;
-     margin: 1%;
-     background-color: #E6ECF5;
-     border: 0px;
-     border-radius: 1.5em;
-     box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+    padding: 1%;
+    margin: 1%;
+    background-color: #E6ECF5;
+    border: 0px;
+    border-radius: 1.5em;
+    box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
 }
 
-#homecontainer #spazio_acquisto{
+#homecontainer #spazio_acquisto {
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 
-#tagcontainer{
+#tagcontainer {
     display: flex;
     justify-content: center;
     flex-direction: row;
@@ -274,116 +275,115 @@ html {
     align-items: center;
 }
 
-.tagsForm{
+.tagsForm {
     display: flex;
     justify-content: center;
     flex-direction: row;
     margin: 2px;
 }
 
-#homecontainer #chiamaProdotto{
+#homecontainer #chiamaProdotto {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
 
-.tagButton{
-    box-shadow:inset 0px 1px 3px 0px #91b8b3;
-    background-color:#a79bb5;
-    border-radius:5px;
-    border:1px solid #566963;
-    display:inline-block;
-    cursor:pointer;
-    color:#ffffff;
+.tagButton {
+    box-shadow: inset 0px 1px 3px 0px #91b8b3;
+    background-color: #a79bb5;
+    border-radius: 5px;
+    border: 1px solid #566963;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
     font-family: 'Raleway', sans-serif;
-    font-size:15px;
+    font-size: 15px;
     margin: 3px;
     padding: 1px;
-    text-decoration:none;
-    text-shadow:0px -1px 0px #2b665e;
+    text-decoration: none;
+    text-shadow: 0px -1px 0px #2b665e;
 }
 
-.tagButton:hover{
-    background-color:#a96bb8;
+.tagButton:hover {
+    background-color: #a96bb8;
 }
 
 
+#spazio_registrazione {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
 
- #spazio_registrazione{
-     display: flex;
-     flex-direction: column;
-     justify-content: center;
-     align-content: center;
-     align-items: center;
-     width: 100%;
-     box-sizing: border-box;
+}
 
- }
+#spazio_registrazione form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    width: 70%;
+    box-sizing: border-box;
+    background-color: #E6ECF5;
+    border: 0px;
+    border-radius: 1.5em;
+    box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+    padding: 30px 3%;
+}
 
- #spazio_registrazione form{
-     display: flex;
-     flex-direction: column;
-     justify-content: center;
-     align-content: center;
-     align-items: center;
-     width: 70%;
-     box-sizing: border-box;
-     background-color: #E6ECF5;
-     border: 0px;
-     border-radius: 1.5em;
-     box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
-     padding: 30px 3%;
- }
+#spazio_registrazione form .riga_input {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-content: flex-start;
+}
 
- #spazio_registrazione form .riga_input{
-     display: flex;
-     width: 100%;
-     justify-content: space-between;
-     align-content: flex-start;
- }
-
- #spazio_registrazione form .riga_input:last-child{
-     justify-content: center;
-     align-content: center;
-     align-items: center;
- }
+#spazio_registrazione form .riga_input:last-child {
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
 
 
- #spazio_registrazione form .riga_input .spazioinput{
-     display: flex;
-     flex-direction: column;
-     justify-content: space-between;
-     width: 40%;
-     min-width: 250px;
-     height: 40px;
-     box-sizing: border-box;
-     margin: 30px 0;
- }
+#spazio_registrazione form .riga_input .spazioinput {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 40%;
+    min-width: 250px;
+    height: 40px;
+    box-sizing: border-box;
+    margin: 30px 0;
+}
 
- #spazio_registrazione form .riga_input .spazioinput .input{
-     border: none;
-     border-bottom: 1px solid #a79bb5;
- }
+#spazio_registrazione form .riga_input .spazioinput .input {
+    border: none;
+    border-bottom: 1px solid #a79bb5;
+}
 
- #spazio_registrazione form .riga_input .spazioinput:last-child{
-     justify-content: center;
- }
+#spazio_registrazione form .riga_input .spazioinput:last-child {
+    justify-content: center;
+}
 
- #spazio_registrazione form .riga_input .spazioinput p{
-     padding:0;
-     margin: 0 auto;
- }
+#spazio_registrazione form .riga_input .spazioinput p {
+    padding: 0;
+    margin: 0 auto;
+}
 
- #spazio_registrazione form .riga_input .spazioinput input{
-        padding: 10px 20px;
- }
+#spazio_registrazione form .riga_input .spazioinput input {
+    padding: 10px 20px;
+}
 
- @media all and (max-width: 767px){
-     #spazio_registrazione form .riga_input{
-         flex-direction: column;
-         align-items: center;
-         align-content: center;
-         justify-content: center;
-     }
- }
+@media all and (max-width: 767px) {
+    #spazio_registrazione form .riga_input {
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+    }
+}
 

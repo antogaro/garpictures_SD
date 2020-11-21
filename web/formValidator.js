@@ -239,7 +239,7 @@ function validateFile(){
 
 function validateCVV(){
     const re = /^[0-9]{3}$/;
-    if(!re.test(document.getElementById("tagsDaInserire").value)) {
+    if(!re.test(document.getElementById("CVV").value)) {
         text = "Formato cvv non valido."
         $("#erroreCVV").empty();
         $("#erroreCVV").append(text);
@@ -254,7 +254,7 @@ function validateCVV(){
 
 function validateCarta(){
     const re = /^\d{4}([ \-]?)((\d{6}\1?\d{5})|(\d{4}\1?\d{4}\1?\d{4}))$/;
-    if(!re.test(document.getElementById("tagsDaInserire").value)) {
+    if(!re.test(document.getElementById("carta").value)) {
         text = "Formato carta non valido."
         $("#erroreCarta").empty();
         $("#erroreCarta").append(text);
@@ -264,6 +264,33 @@ function validateCarta(){
         $("#carta").css("background-color", "#ffffff");
         $("#erroreCarta").empty();
         validator.carta = true;
+    }
+}
+
+function validateMailAcquisto() {
+    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    if(!re.test(document.getElementById("email").value)) {
+        validator.emailAcquisto = false;
+        text = "Formato email non valido."
+        $("#erroreMail").empty();
+        $("#erroreMail").append(text);
+        $("#email").css("background-color", "#ffc0ad");
+    }else {
+        $email = $("#email").val();
+        $.post("ControlloEmailAJAX", {field1: $email},
+            function(returnedData){
+                var found = JSON.parse(returnedData);
+                if(found == "vero"){
+                    validator.emailAcquisto = false;
+                    $("#erroreMail").empty();
+                    $("#erroreMail").append("Utente registrato. Effettua il login per continuare l'acquisto");
+                    $("#email").css("background-color", "#ffc0ad");
+                } else{
+                    validator.emailAcquisto = true;
+                    $("#erroreMail").empty();
+                    $("#email").css("background-color", "#ffffff");
+                }
+            });
     }
 }
 document.addEventListener("DOMContentLoaded", function() {
@@ -296,18 +323,21 @@ document.addEventListener("DOMContentLoaded", function() {
     })
 
     $("#completaPagamento").submit(function (e) {
-        e.preventDefault();
-        console.log("titolo"+validator.titolo);
-        console.log("descrizione"+validator.descrizione);
-        console.log("prezzo"+validator.prezzo);
-        console.log("tag"+validator.tag);
-        console.log("file"+validator.file);
-        if(validator.mail == false || validator.mail == null || validator.cvv == false ||
-            validator.cvv == null || validator.carta == false || validator.carta == null){
-            e.preventDefault();
-            validateMail();
-            validateCVV();
-            validateCarta();
+        if($("#emailUtente").length){
+            if( validator.cvv == false || validator.cvv == null || validator.carta == false || validator.carta == null) {
+                e.preventDefault();
+                validateCVV();
+                validateCarta();
+            }
+        }
+        else{
+            if(validator.emailAcquisto == false || validator.emailAcquisto == null || validator.cvv == false ||
+                validator.cvv == null || validator.carta == false || validator.carta == null){
+                e.preventDefault();
+                validateMailAcquisto();
+                validateCVV();
+                validateCarta();
+            }
         }
     })
 });

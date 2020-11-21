@@ -16,7 +16,7 @@
             <img src="./img/${prodotto.source}" class="prodotti">
                 <div id="prodottettag">
                         ${prodotto.nome} <br/>
-                <button type="submit" name="prodotto" value="${prodotto.id}">Elimina prodotto</button>
+                <button type="submit" class="siteButtons" name="prodotto" value="${prodotto.id}">Elimina prodotto</button>
                 </div>
         </div>
     </c:forEach>

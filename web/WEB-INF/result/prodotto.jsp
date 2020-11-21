@@ -14,7 +14,7 @@
             ${prodotto.prezzo} &euro; <br/>
             <div id="bottoniCarrello">
                 <form action="ChiamaFinalizzaAcquisto" method="get">
-                    <button type="submit" class="pagProdotto" name="acquista" id="acquista" value="${prodotto.id}">
+                    <button type="submit" class="siteButtons2" name="acquista" id="acquista" value="${prodotto.id}">
                         Acquista
                     </button>
                     <br/>
@@ -23,14 +23,14 @@
                     Prodotto prodotto = (Prodotto) request.getAttribute("prodotto");
                     if (!carrello.isProdottoIn(prodotto)) {
                 %>
-                <button type="button" class="pagProdotto" id="aggiungi" value="aggiungi" name="prodottoId">Aggiungi al
+                <button type="button" class="siteButtons3" id="aggiungi" value="aggiungi" name="prodottoId">Aggiungi al
                     carrello
                 </button>
                 <br/>
                 <%
                 } else {
                 %>
-                <button type="button" class="pagProdotto" id="rimuovi" value="rimuovi" name="prodottoId">Rimuovi dal
+                <button type="button" class="siteButtons" id="rimuovi" value="rimuovi" name="prodottoId">Rimuovi dal
                     carrello
                 </button>
                 <br/>

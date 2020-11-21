@@ -17,7 +17,7 @@
                 <td>Conferma la nuova password:</td><td><input type="password" name="nuovaPasswordConferma" id="nuovaPasswordConferma" onfocusout="validateConfermaPassword()"></td><td id="erroreNuovaPasswordConferma"></td>
             </tr>
             <tr>
-                <td><input type="submit" value="cambia password" id="submitCambiaPassword"></td>
+                <td><input type="submit" class="siteButtons2" value="cambia password" id="submitCambiaPassword"></td>
             </tr>
         </form>
         <c:if test="${errore != null}">

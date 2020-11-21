@@ -12,9 +12,9 @@
     <table>
         <tr>
             <form action="ChiamaOperazioneAdmin">
-            <th><button type="submit" name="operazione" value="listaProdotti">Lista Prodotti</button> </th>
-                <th><button type="submit" name="operazione" value="listaUtenti">Lista Utenti</button> </th>
-                <th><button type="submit" name="operazione" value="aggiungiProdotto">Aggiungi un Prodotto</button> </th>
+            <th><button type="submit" class="siteButtons" name="operazione" value="listaProdotti">Lista Prodotti</button> </th>
+                <th><button type="submit" class="siteButtons" name="operazione" value="listaUtenti">Lista Utenti</button> </th>
+                <th><button type="submit"  class="siteButtons" name="operazione" value="aggiungiProdotto">Aggiungi un Prodotto</button> </th>
             </form>
         </tr>
     </table>

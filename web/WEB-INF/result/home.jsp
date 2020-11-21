@@ -12,6 +12,9 @@
     </script>
 </c:if>
     <div id="homecontainer">
+        <c:if test="${not empty errore}">
+            <p>${errore}</p>
+        </c:if>
         <c:if test="${not empty sessionScope.tagsUtente}">
 
             <div id="tagcontainer">

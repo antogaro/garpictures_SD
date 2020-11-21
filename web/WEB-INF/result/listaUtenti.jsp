@@ -23,10 +23,10 @@
                 <th>${utente.amministratore}</th>
                 <form action="GestisciUtente" method="post">
                     <th><c:choose>
-                        <c:when test="${utente.amministratore == true}"><button type="submit" name="revoca" value="${utente.id}">Revoca privilegi</button></c:when>
-                        <c:otherwise><button type="submit" name="promuovi" value="${utente.id}">Promuovi ad admin</button> </c:otherwise>
+                        <c:when test="${utente.amministratore == true}"><button class="siteButtons3" type="submit" name="revoca" value="${utente.id}">Revoca privilegi</button></c:when>
+                        <c:otherwise><button type="submit" class="siteButtons2" name="promuovi" value="${utente.id}">Promuovi ad admin</button> </c:otherwise>
                     </c:choose> </th>
-                    <th><button type="submit" name="bandisci" value="${utente.id}">Bandisci dal sito</button> </th>
+                    <th><button type="submit"  class="siteButtons" name="bandisci" value="${utente.id}">Bandisci dal sito</button> </th>
                 </c:if>
                 </form>
             </tr>
