@@ -72,7 +72,7 @@
 }
 
 
-.siteButtons{
+.siteButtons {
     padding: 5px;
     margin: 5px;
     cursor: pointer;
@@ -84,7 +84,7 @@
     border: 0;
 }
 
-.siteButtons2{
+.siteButtons2 {
     padding: 5px;
     margin: 5px;
     cursor: pointer;
@@ -96,7 +96,7 @@
     border: 0;
 }
 
-.siteButtons3{
+.siteButtons3 {
     margin: 5px;
     padding: 5px;
     cursor: pointer;
@@ -144,7 +144,7 @@ form.loginform {
     justify-content: center;
 }
 
-#divProdotto{
+#divProdotto {
     background-color: white;
     justify-content: space-between;
     box-shadow: 10px 10px 5px #aaaaaa;
@@ -349,7 +349,7 @@ html {
     align-items: center;
 }
 
-#homecontainer .spazio_prodotto{
+#homecontainer .spazio_prodotto {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -366,7 +366,7 @@ html {
     flex-direction: column;
 }
 
-#homecontainer #spazio_finalizza{
+#homecontainer #spazio_finalizza {
     display: flex;
     justify-content: center;
     align-content: center;
@@ -375,7 +375,7 @@ html {
     padding: 40px;
 }
 
-#homecontainer #spazio_finalizza #completaPagamento{
+#homecontainer #spazio_finalizza #completaPagamento {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -384,7 +384,7 @@ html {
     width: 100%;
 }
 
-#homecontainer #spazio_finalizza #completaPagamento #spazio_info_pagamento{
+#homecontainer #spazio_finalizza #completaPagamento #spazio_info_pagamento {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -394,7 +394,7 @@ html {
     padding-top: 40px;
 }
 
-#homecontainer #spazio_finalizza #completaPagamento #spazio_info_pagamento .campoInput{
+#homecontainer #spazio_finalizza #completaPagamento #spazio_info_pagamento .campoInput {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -403,9 +403,9 @@ html {
     height: 40px;
     box-sizing: border-box;
     margin: 30px;
- }
+}
 
-#homecontainer #spazio_finalizza #completaPagamento #spazio_info_pagamento .campoInput input{
+#homecontainer #spazio_finalizza #completaPagamento #spazio_info_pagamento .campoInput input {
     padding: 10px 20px;
     border-bottom: 1px solid #86BBD8;
 }
@@ -421,7 +421,7 @@ html {
     margin: 30px 0;
 }
 
-#descrizione{
+#descrizione {
     display: flex;
     width: 100%;
     flex-direction: column;
@@ -466,9 +466,8 @@ html {
 }
 
 
-
 @media all and (max-width: 1024px) {
-    #homecontainer #spazio_finalizza #completaPagamento #spazio_info_pagamento{
+    #homecontainer #spazio_finalizza #completaPagamento #spazio_info_pagamento {
         flex-direction: column;
     }
 }

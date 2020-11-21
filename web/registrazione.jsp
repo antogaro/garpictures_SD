@@ -35,7 +35,8 @@
         </div>
         <div class="riga_input">
             <div class="spazioinput">
-                <input type="text" id="email" name="email" placeholder="Indirizzo Email" onfocusout="validateMail()" class="input">
+                <input type="text" id="email" name="email" placeholder="Indirizzo Email" onfocusout="validateMail()"
+                       class="input">
                 <p id="erroreMail"></p>
             </div>
             <div class="spazioinput">
@@ -46,7 +47,8 @@
         </div>
         <div class="riga_input">
             <div class="spazioinput">
-                <input type="text" id="citta" onfocusout="validateCitta()" placeholder="Citta'" name="citta" class="input">
+                <input type="text" id="citta" onfocusout="validateCitta()" placeholder="Citta'" name="citta"
+                       class="input">
                 <p id="erroreCitta"></p>
             </div>
             <div class="spazioinput">
@@ -56,7 +58,8 @@
         </div>
         <div class="riga_input">
             <div class="spazioinput">
-                <input type="text" id="telefono" name="telefono" placeholder="Telefono" onfocusout="validateNumero()" class="input">
+                <input type="text" id="telefono" name="telefono" placeholder="Telefono" onfocusout="validateNumero()"
+                       class="input">
                 <p id="erroreNumero"></p>
             </div>
         </div>
