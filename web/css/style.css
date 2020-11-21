@@ -144,7 +144,7 @@ form.loginform {
     justify-content: center;
 }
 
-#divProdotto {
+#divProdotto{
     background-color: white;
     justify-content: space-between;
     box-shadow: 10px 10px 5px #aaaaaa;
@@ -309,7 +309,7 @@ html {
 }
 
 
-#spazio_registrazione {
+.spazioregistrazione {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -320,7 +320,7 @@ html {
 
 }
 
-#spazio_registrazione form {
+.spazioregistrazione form {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -335,14 +335,14 @@ html {
     padding: 30px 3%;
 }
 
-#spazio_registrazione form .riga_input {
+.spazioregistrazione form .riga_input {
     display: flex;
     width: 100%;
     justify-content: space-between;
     align-content: flex-start;
 }
 
-#spazio_registrazione form .riga_input:last-child {
+.spazioregistrazione form .riga_input:last-child {
     justify-content: center;
     align-content: center;
     align-items: center;
@@ -409,7 +409,7 @@ html {
     border-bottom: 1px solid #86BBD8;
 }
 
-#spazio_registrazione form .riga_input .spazioinput {
+.spazioregistrazione form .riga_input .spazioinput {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -420,26 +420,39 @@ html {
     margin: 30px 0;
 }
 
-#spazio_registrazione form .riga_input .spazioinput .input {
+#descrizione{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    min-width: 250px;
+    height: 80px;
+    box-sizing: border-box;
+    margin: 0px 0;
+    padding: 15px;
+    align-content: center;
+    align-self: center;
+}
+
+.spazioregistrazione form .riga_input .spazioinput .input {
     border: none;
     border-bottom: 1px solid #a79bb5;
 }
 
-#spazio_registrazione form .riga_input .spazioinput:last-child {
+.spazioregistrazione form .riga_input .spazioinput:last-child {
     justify-content: center;
 }
 
-#spazio_registrazione form .riga_input .spazioinput p {
+.spazioregistrazione form .riga_input .spazioinput p {
     padding: 0;
     margin: 0 auto;
 }
 
-#spazio_registrazione form .riga_input .spazioinput input {
+.spazioregistrazione form .riga_input .spazioinput input {
     padding: 10px 20px;
 }
 
 @media all and (max-width: 767px) {
-    #spazio_registrazione form .riga_input {
+    .spazioregistrazione form .riga_input {
         flex-direction: column;
         align-items: center;
         align-content: center;

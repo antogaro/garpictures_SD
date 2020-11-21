@@ -6,7 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ include file="/WEB-INF/result/header.jsp" %>
-<div id="spazio_registrazione">
+<div id="spazio_registrazione" class="spazioregistrazione">
     <h1>
         Registrazione
     </h1>

@@ -6,29 +6,37 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ include file="/WEB-INF/result/header.jsp" %>
-<div class="sito">
+<div id="spazio_registrazione" class="spazioregistrazione">
+    <h1>
+        Carica un prodotto
+    </h1>
     <form action="UploadServlet" method="post" enctype="multipart/form-data" id="caricaProdotto">
-        <table>
-            <tr>
-            <td> Titolo prodotto:</td><td><input type="text" name="titolo" id="titolo" onfocusout="validateTitolo()"></td><td id="erroreTitolo"></td>
-            </tr>
-            <tr>
-                <td>Descrizione prodotto:</td><td> <textarea name="descrizione" id="descrizione" rows="3" cols="40" onfocusout="validateDescrizione()" placeholder="Una breve descrizione del prodotto."></textarea><td><td id="erroreDescrizione"></td>
-            </tr>
-            <tr>
-                <td> Inserisci il prezzo:</td> <td><input type="text" name="prezzo" id="prezzo" onfocusout="validatePrezzo()"></td><td id="errorePrezzo"></td>
-            </tr>
-            <tr>
-                <td>Inserisci tag separati da una virgola:</td> <td><input type="text" name="tags" id="tagsDaInserire" onfocusout="validateTag()"></td><td id="erroreTags"></td>
-            </tr>
-            <tr>
-                <td>Carica file(PNG/JPEG):</td><td><input type="file" name="prodotto" accept="image/png, image/jpeg" id="prodotto" onchange="validateFile()"></td><td id="erroreInserimento"></td>
-            </tr>
-            <tr>
-                <td><input type="submit" value="Aggiungi prodotto" class="siteButtons2" name="submitProdotto" id="submitProdotto"></td>
-            </tr>
-        </table>
+        <div class="riga_input">
+            <div class="spazioinput">
+                <input type="text" name="titolo" id="titolo" onfocusout="validateTitolo()" placeholder="Titolo prodotto"><td id="erroreTitolo"></td>
+            </div>
+            <div class="spazioinput">
+                <input type="text" name="prezzo" id="prezzo" onfocusout="validatePrezzo()" placeholder="Prezzo"><td id="errorePrezzo"></td>
+            </div>
+        </div>
+        <div class="riga_input">
+            <div class="spazioinput">
+                <input type="text" name="tags" id="tagsDaInserire" onfocusout="validateTag()" placeholder="Tag separati da una virgola"><td id="erroreTags"></td>
+            </div>
+            <div class="spazioinput">
+                <input type="file" name="prodotto" accept="image/png, image/jpeg" id="prodotto" onchange="validateFile()" placeholder="Immagine jpeg/png"><td id="erroreInserimento"></td>
+            </div>
+        </div>
+        <div class="riga_input">
+                <textarea name="descrizione" id="descrizione" rows="3" cols="40" onfocusout="validateDescrizione()" placeholder="Una breve descrizione del prodotto."></textarea><td id="erroreDescrizione"></td>
 
+        </div>
+        <div class="riga_input">
+            <div class="spazioinput">
+                <input type="submit" value="Aggiungi prodotto" class="siteButtons2" name="submitProdotto" id="submitProdotto"></td>
+            </div>
+        </div>
+        </table>
     </form>
 </div>
 <%@ include file="/WEB-INF/result/footer.jsp" %>
