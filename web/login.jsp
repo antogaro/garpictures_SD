@@ -14,11 +14,22 @@
         <form class="loginform" action="Login" method="post">
             <table>
                 <tr>
-                    <td><input class="ilogin" type="text" name="nomeUtente" id="nomeUtente" placeholder="Nome Utente">
+                    <td>
+                        <input class="ilogin" type="text" name="nomeUtente" id="nomeUtente" placeholder="Nome Utente">
                     </td>
                 </tr>
                 <tr>
-                    <td><input class="ilogin" type="password" name="password" id="password" placeholder="Password"></td>
+                    <td>
+                        <div class="spazioinput"><input class="ilogin" type="password" name="password" id="password"
+                                                        placeholder="Password">
+                            <p>
+                                <c:if test="${login !=null}">
+                            <p>${login}</p>
+                            </c:if>
+                            </p>
+                        </div>
+
+                    </td>
                 </tr>
                 <tr>
                     <td><input class="bottonelogin" type="submit" id="submitLogin" value="Login" align="center"></td>
@@ -28,9 +39,7 @@
                 </tr>
             </table>
         </form>
-        <c:if test="${login !=null}">
-            <p>${login}</p>
-        </c:if>
+
     </div>
 </div>
 <%@ include file="/WEB-INF/result/footer.jsp" %>

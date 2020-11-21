@@ -40,6 +40,9 @@
         <p>Totale: <fmt:formatNumber type="number" maxFractionDigits="2" minFractionDigits="2"
                                      value="${total}"/>&euro;</p>
         <form action="CompletaPagamento" method="post" name ="completaPagamento" id="completaPagamento">
+            <c:if test="${not empty fromCarrello}">
+                <input type="hidden" name="fromCarrello" value="fromCarrello">
+            </c:if>
             <div id="spazio_info_pagamento">
                 <c:if test="${beanUtente.visitatore == true}">
                     <div class="campoInput">
