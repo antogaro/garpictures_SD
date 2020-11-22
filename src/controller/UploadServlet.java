@@ -13,7 +13,6 @@ import javax.servlet.http.Part;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
-import java.lang.reflect.Array;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
@@ -95,7 +94,7 @@ public class UploadServlet extends HttpServlet {
         address = "home";
         request.setAttribute("finalizza", "Prodotto caricato con successo.");
         };
-
+        System.out.println("prova");
         if(address.equals("home")){
             RequestDispatcher dispatcher = request.getRequestDispatcher(address);
             dispatcher.forward(request,response);

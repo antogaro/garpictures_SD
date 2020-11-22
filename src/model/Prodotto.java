@@ -1,7 +1,5 @@
 package model;
 
-import java.util.ArrayList;
-
 public class Prodotto {
     public Prodotto(String nome, String source, float prezzo, String descrizione){
         this.prezzo= prezzo;

@@ -1,7 +1,6 @@
 package controller;
 
 import model.Carrello;
-import model.CarrelloDAO;
 import model.Utente;
 
 import javax.servlet.RequestDispatcher;
