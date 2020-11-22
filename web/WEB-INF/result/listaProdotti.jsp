@@ -8,18 +8,21 @@
 <%@ include file="/WEB-INF/result/header.jsp" %>
 <c:choose>
     <c:when test="${beanUtente.amministratore}">
-        <div class="sito">
-            <form action="CancellaProdotto" method="post">
-                <c:forEach items="${prodotti}" var="prodotto">
-                    <div class="sito" id="divProdotto">
-                        <img src="./img/${prodotto.source}" class="prodotti">
-                        <div id="prodottettag">
-                                ${prodotto.nome} <br/>
-                            <button type="submit" class="siteButtons" name="prodotto" value="${prodotto.id}">Elimina prodotto</button>
+        <div class="listaWrapper">
+            <div class="sito">
+                <input type="text" placeholder="Filtra per nome..." id="filtraProdotto" name="nome" class="searchNome">
+                <form action="CancellaProdotto" method="get" id="cancellaProdotto" class="cancellaProdotto">
+                    <c:forEach items="${prodotti}" var="prodotto">
+                        <div id="divProdotto">
+                            <img src="./img/${prodotto.source}">
+                            <p>${prodotto.nome}</p>
+                            <button type="submit" class="siteButtons" name="prodotto" value="${prodotto.id}">Elimina
+                                prodotto
+                            </button>
                         </div>
-                    </div>
-                </c:forEach>
-            </form>
+                    </c:forEach>
+                </form>
+            </div>
         </div>
         <%@ include file="/WEB-INF/result/footer.jsp" %>
     </c:when>
@@ -31,4 +34,20 @@
     </c:when>
 </c:choose>
 </body>
+<script>
+    $(document).on("keyup", "#filtraProdotto", function () {
+        $(".cancellaProdotto").empty();
+        $nomeProdotto = $("#filtraProdotto").val();
+        $.post("FiltraPerNome", {field1: $nomeProdotto}, function (responseJson) {
+            $.each(responseJson, function (index, prodotto) {
+                $(".cancellaProdotto").append("<div id=\"divProdotto\">\n" +
+                    "                            <img src=\"./img/"+prodotto.source+"\">\n" +
+                    "                            <p>"+prodotto.nome+"</p>\n" +
+                    "                            <button type=\"submit\" class=\"siteButtons\" name=\"prodotto\" value=\""+prodotto.id+"\">Elimina\n" +
+                    "                                prodotto\n" +
+                    "                            </button>")
+            });
+        });
+    });
+</script>
 </html>

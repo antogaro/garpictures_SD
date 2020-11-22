@@ -464,6 +464,45 @@ html {
     align-content: center;
     align-items: center;
     height: 60%;
+    padding: 10px;
+}
+
+#cancellaProdotto{
+   width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+#cancellaProdotto #divProdotto{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 50px;
+    align-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+#cancellaProdotto #divProdotto img{
+    width: 100%;
+    height: auto;
+    max-width: 150px;
+}
+
+.listaWrapper .sito .searchNome{
+    border:none;
+    border-bottom: 1px solid #917898;
+    background-color: #E6ECF5;
+    font-family: 'Raleway', sans-serif;
+    height: 40px;
+    font-size: 20px;
+    align-self: center;
+}
+
+.listaWrapper .sito{
+    align-content: center;
+    flex-direction: column;
 }
 
 .spazioregistrazione form .riga_input .spazioinput .input {
@@ -494,6 +533,14 @@ html {
 
     #homecontainer .spazio_prodotto {
         flex-direction: column;
+    }
+
+    #cancellaProdotto #divProdotto{
+        flex-direction: column;
+    }
+
+    #cancellaProdotto{
+        width: 60%;
     }
 }
 

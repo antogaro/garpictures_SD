@@ -15,6 +15,10 @@ import java.util.ArrayList;
 @WebServlet("/CancellaProdotto")
 public class CancellaProdotto extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        doGet(request,response);
+    }
+
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         int idProdotto = Integer.parseInt(request.getParameter("prodotto"));
         var filter = new ProdottoDAO();
         filter.doDeleteByID(idProdotto);
@@ -26,9 +30,5 @@ public class CancellaProdotto extends HttpServlet {
         request.setAttribute("prodotti",prodotti);
         RequestDispatcher dispatcher = request.getRequestDispatcher(address);
         dispatcher.forward(request,response);
-    }
-
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-      doPost(request,response);
     }
 }

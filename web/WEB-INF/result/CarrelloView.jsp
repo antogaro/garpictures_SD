@@ -28,6 +28,8 @@
     <div id="carrelloVuoto">
     </div>
     <div id="bottoniCarrello">
+        <p id="totale"><fmt:formatNumber type="number" maxFractionDigits="2" minFractionDigits="2"
+                                         value="${sessionScope.carrello.totale}"/>&euro;</p>
         <form action="SvuotaCarrello" method="post">
             <button class="siteButtons" type="submit" id="svuotaCarrello">Svuota Carrello</button>
         </form>
@@ -36,8 +38,6 @@
                 acquisto
             </button>
         </form>
-        <p><fmt:formatNumber type="number" maxFractionDigits="2" minFractionDigits="2"
-                             value="${sessionScope.carrello.totale}"/>&euro;</p>
     </div>
     <%
     } else {
@@ -58,7 +58,7 @@
             function (returnedData) {
                 $elemento.parent().parent().remove();
                 var totale = JSON.parse(returnedData);
-                $("#totale").text(totale.toFixed(2) + "&euro;");
+                $("#totale").html(totale.toFixed(2) + "&euro;");
                 if (totale == 0) {
                     $("#bottoniCarrello").empty();
                     $("#bottoniCarrello").text("Non hai alcun prodotto nel carrello.")
