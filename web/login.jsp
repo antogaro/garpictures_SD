@@ -13,16 +13,16 @@
         <div id="spazio_login">
             <div class="logeen">
                 <p class="Entra" align="center">Entra</p>
-                <form class="loginform" action="Login" method="post">
+                <form class="loginform" action="Login" method="post" id="loginForm">
                     <div class="spazioinput">
-                            <input class="ilogin" type="text" name="nomeUtente" id="nomeUtente" placeholder="Nome Utente">
+                            <input class="ilogin" type="text" name="nomeUtente" id="nomeUtente" placeholder="Nome Utente" onfocusout="validateLogin()">
                     </div>
                     <div class="spazioinput">
                         <input class="ilogin" type="password" name="password" id="password"
-                                                    placeholder="Password">
-                        <c:if test="${login !=null}">
-                            <p>${login}</p>
-                        </c:if>
+                                                    placeholder="Password"  onfocusout="validatePassword()">
+                        <p id="erroreLogin"> <c:if test="${login !=null}">
+                            ${login}
+                        </c:if></p>
                     </div>
                     <input class="bottonelogin" type="submit" id="submitLogin" value="Login" align="center">
 
@@ -40,4 +40,5 @@
 </c:choose>
 <%@ include file="/WEB-INF/result/footer.jsp" %>
 </body>
+<script src="formValidator.js"></script>
 </html>

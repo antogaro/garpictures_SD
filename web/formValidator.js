@@ -155,12 +155,31 @@ function validatePassword() {
         text = "Formato password non valido."
         $("#errorePassword").empty();
         $("#errorePassword").append(text);
+        $("#erroreLogin").empty();
+        $("#erroreLogin").append(text);
         $("#password").css("background-color", "#ffc0ad");
         validator.password = false;
     }else{
+        $("#erroreLogin").empty();
         $("#errorePassword").empty();
         $("#password").css("background-color", "#ffffff");
         validator.password = true;
+    }
+
+}
+
+function validateLogin() {
+    const re = /^[A-Za-z0-9]{5,20}$/;
+    if(!re.test(document.getElementById("nomeUtente").value)) {
+        text = "Formato Nome utente non valido."
+        $("#erroreLogin").empty();
+        $("#erroreLogin").append(text);
+        $("#nomeUtente").css("background-color", "#ffc0ad");
+        validator.login = false;
+    }else{
+        $("#erroreLogin").empty();
+        $("#nomeUtente").css("background-color", "#ffffff");
+        validator.login = true;
     }
 
 }
@@ -319,6 +338,14 @@ document.addEventListener("DOMContentLoaded", function() {
             validatePrezzo();
             validateTag();
             validateFile();
+        }
+    })
+
+    $("#loginForm").submit(function (e) {
+        if(validator.password == false || validator.password == null || validator.login == false || validator.login == null){
+            e.preventDefault();
+            validatePassword();
+            validateLogin();
         }
     })
 

@@ -7,14 +7,22 @@
 --%>
 <%@ include file="/WEB-INF/result/header.jsp" %>
 <c:if test="${prodottoCaricato != null}">
-    <script>
-        alert("Prodotto aggiunto con successo.");
-    </script>
 </c:if>
+
+    <div class="homeWrapper">
+        <c:if test="${not empty finalizza}">
+            <div class="finalizza">
+                <h2>${finalizza}</h2>
+                <script>
+                    $(".finalizza").fadeOut(4000);
+                </script>
+            </div>
+        </c:if>
     <div id="homecontainer">
         <c:if test="${not empty errore}">
             <p>${errore}</p>
         </c:if>
+
         <c:if test="${not empty sessionScope.tagsUtente}">
 
             <div id="tagcontainer">
@@ -38,7 +46,7 @@
             ${risultato}
         </c:if>
 
-        <form action="ChiamaProdotto" method="post" id="chiamaProdotto">
+        <form action="ChiamaProdotto" method="get" id="chiamaProdotto">
             <c:forEach items="${prodotti}" var="prodotto">
                 <button class="containerImmagini" type="submit" name="prodottoId" value="${prodotto.id}">
                     <div class="cartolina">
@@ -54,6 +62,7 @@
 
             </c:forEach>
         </form>
+    </div>
     </div>
 <%@ include file="/WEB-INF/result/footer.jsp" %>
 </body>

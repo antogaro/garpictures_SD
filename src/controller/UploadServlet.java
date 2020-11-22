@@ -93,11 +93,12 @@ public class UploadServlet extends HttpServlet {
             filter2.doRelation(x, prodotto);
         }
         address = "home";
-        request.setAttribute("prodottoCaricato", "prodottoCaricato");
+        request.setAttribute("finalizza", "Prodotto caricato con successo.");
         };
 
         if(address.equals("home")){
-            response.sendRedirect(address);
+            RequestDispatcher dispatcher = request.getRequestDispatcher(address);
+            dispatcher.forward(request,response);
         }else{
             RequestDispatcher dispatcher = request.getRequestDispatcher(address);
             dispatcher.forward(request,response);

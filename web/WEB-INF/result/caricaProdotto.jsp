@@ -26,7 +26,7 @@
                         <input type="text" name="tags" id="tagsDaInserire" onfocusout="validateTag()" placeholder="Tag separati da una virgola"><p id="erroreTags"></p>
                     </div>
                     <div class="spazioinput">
-                        <input type="file" name="prodotto" accept="image/png, image/jpeg" id="prodotto" onchange="validateFile()" placeholder="Immagine jpeg/png"><p id="erroreInserimento"></p>
+                        <input type="file" name="prodotto" accept="image/png, image/jpeg" id="prodotto" onchange="validateFile()" placeholder="Immagine jpeg/png">
                     </div>
                 </div>
                 <div class="riga_input">

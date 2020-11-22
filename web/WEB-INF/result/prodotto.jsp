@@ -7,62 +7,76 @@
 --%>
 <%@ include file="/WEB-INF/result/header.jsp" %>
 <div class="sito">
-    <div class="sito" id="divProdotto">
-    <img src="./img/${prodotto.source}" class="prodotti">
-        <div id="prodottettag">
-            ${prodotto.nome} <br/>
-            ${prodotto.prezzo} &euro; <br/>
-            <div id="bottoniCarrello">
-                <form action="ChiamaFinalizzaAcquisto" method="get">
-                    <button type="submit" class="siteButtons2" name="acquista" id="acquista" value="${prodotto.id}">
-                        Acquista
-                    </button>
-                    <br/>
+    <div id="singoloProdottoWrapper">
+        <div id="divProdotto">
+            <div id="containerImmagineTag">
+                <img src="./img/${prodotto.source}" class="prodotti">
+                <!-- Tutto il blocco di codice sottostante è per alternare i + e - sui bottoni dei tag -->
+                <form action="RicercaPerTag" method="post" id="ricercaPerTag">
+                    <c:forEach items="${tags}" var="tag">
+                        <c:set var="flag" value="1"/>
+                        <c:choose>
+                            <c:when test="${not empty sessionScope.tagsUtente}">
+                                <c:forEach items="${sessionScope.tagsUtente}" var="tagsUtente">
+                                    <c:choose>
+                                        <c:when test="${tagsUtente.tag == tag.tag}">
+                                            <button type="submit" class="tagButton" name="tag" value="${tag.tag}">
+                                                -${tag.tag}</button>
+                                            <c:set var="flag" value="2"/>
+                                        </c:when>
+                                    </c:choose>
+                                </c:forEach>
+                            </c:when>
+                        </c:choose>
+                        <c:choose>
+                            <c:when test="${flag == 1}">
+                                <button type="submit" class="tagButton" name="tag" value="${tag.tag}">
+                                    +${tag.tag}</button>
+                            </c:when>
+                        </c:choose>
+                    </c:forEach>
                 </form>
-                <%
-                    Prodotto prodotto = (Prodotto) request.getAttribute("prodotto");
-                    if (!carrello.isProdottoIn(prodotto)) {
-                %>
-                <button type="button" class="siteButtons3" id="aggiungi" value="aggiungi" name="prodottoId">Aggiungi al
-                    carrello
-                </button>
-                <br/>
-                <%
-                } else {
-                %>
-                <button type="button" class="siteButtons" id="rimuovi" value="rimuovi" name="prodottoId">Rimuovi dal
-                    carrello
-                </button>
-                <br/>
             </div>
-            <%
-                }
-            %>
-            <span class="popuptext" id="popup"> </span></br>
-            <!-- Tutto il blocco di codice sottostante è per alternare i + e - sui bottoni dei tag -->
-            <form action="RicercaPerTag" method="post">
-                <c:forEach items="${tags}" var="tag">
-                    <c:set var="flag" value="1"/>
-                    <c:choose>
-                        <c:when test="${not empty sessionScope.tagsUtente}">
-                            <c:forEach items="${sessionScope.tagsUtente}" var="tagsUtente">
-                                <c:choose>
-                                    <c:when test="${tagsUtente.tag == tag.tag}">
-                                        <button type="submit" class="tagButton" name="tag" value="${tag.tag}">
-                                            -${tag.tag}</button>
-                                        <c:set var="flag" value="2"/>
-                                    </c:when>
-                                </c:choose>
-                            </c:forEach>
-                        </c:when>
-                    </c:choose>
-                    <c:choose>
-                        <c:when test="${flag == 1}">
-                            <button type="submit" class="tagButton" name="tag" value="${tag.tag}">+${tag.tag}</button>
-                        </c:when>
-                    </c:choose>
-                </c:forEach>
-            </form>
+            <div id="spazio_descrizione">
+                <p>${prodotto.nome}</p>
+                <p id="descrizioneProdotto">${prodotto.descrizione}</p>
+                <div id="spazio_bottoni">
+                    <p> <fmt:formatNumber type="number" maxFractionDigits="2" minFractionDigits="2"
+                                          value="${prodotto.prezzo}"/>&euro;</p>
+                    <div id="bottoniCarrello">
+                        <form action="ChiamaFinalizzaAcquisto" method="get">
+                            <button type="submit" class="siteButtons2" name="acquista" id="acquista"
+                                    value="${prodotto.id}">
+                                Acquista
+                            </button>
+                            <br/>
+                        </form>
+                        <%
+                            Prodotto prodotto = (Prodotto) request.getAttribute("prodotto");
+                            if (!carrello.isProdottoIn(prodotto)) {
+                        %>
+                        <button type="button" class="siteButtons3" id="aggiungi" value="aggiungi" name="prodottoId">
+                            Aggiungi
+                            al
+                            carrello
+                        </button>
+                        <br/>
+                    </div>
+                        <%
+                        } else {
+                        %>
+                        <button type="button" class="siteButtons" id="rimuovi" value="rimuovi" name="prodottoId">Rimuovi
+                            dal
+                            carrello
+                        </button>
+                        <br/>
+                    </div>
+                    <%
+                        }
+                    %>
+                    <span class="popuptext" id="popup"> </span></br>
+                </div>
+            </div>
         </div>
     </div>
 </div>

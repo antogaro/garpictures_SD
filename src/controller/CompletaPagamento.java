@@ -41,7 +41,7 @@ public class CompletaPagamento extends HttpServlet {
         }
 
         if(request.getAttribute("errore")==null){
-            request.setAttribute("acquisto",true);
+            request.setAttribute("finalizza","Grazie per l'acquisto!");
             if(fromCarrello != null){
                 HttpSession session = request.getSession();
                 Carrello carrello = (Carrello) session.getAttribute("carrello");
