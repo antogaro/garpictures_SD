@@ -15,30 +15,34 @@
             <form action="UploadServlet" method="post" enctype="multipart/form-data" id="caricaProdotto">
                 <div class="riga_input">
                     <div class="spazioinput">
-                        <input type="text" name="titolo" id="titolo" onfocusout="validateTitolo()" placeholder="Titolo prodotto"><td id="erroreTitolo"></td>
+                        <input type="text" name="titolo" id="titolo" onfocusout="validateTitolo()" placeholder="Titolo prodotto"><p id="erroreTitolo"></p>
                     </div>
                     <div class="spazioinput">
-                        <input type="text" name="prezzo" id="prezzo" onfocusout="validatePrezzo()" placeholder="Prezzo"><td id="errorePrezzo"></td>
+                        <input type="text" name="prezzo" id="prezzo" onfocusout="validatePrezzo()" placeholder="Prezzo"><p id="errorePrezzo"></p>
                     </div>
                 </div>
                 <div class="riga_input">
                     <div class="spazioinput">
-                        <input type="text" name="tags" id="tagsDaInserire" onfocusout="validateTag()" placeholder="Tag separati da una virgola"><td id="erroreTags"></td>
+                        <input type="text" name="tags" id="tagsDaInserire" onfocusout="validateTag()" placeholder="Tag separati da una virgola"><p id="erroreTags"></p>
                     </div>
                     <div class="spazioinput">
-                        <input type="file" name="prodotto" accept="image/png, image/jpeg" id="prodotto" onchange="validateFile()" placeholder="Immagine jpeg/png"><td id="erroreInserimento"></td>
+                        <input type="file" name="prodotto" accept="image/png, image/jpeg" id="prodotto" onchange="validateFile()" placeholder="Immagine jpeg/png"><p id="erroreInserimento"></p>
                     </div>
                 </div>
                 <div class="riga_input">
-                    <textarea name="descrizione" id="descrizione" rows="3" cols="40" onfocusout="validateDescrizione()" placeholder="Una breve descrizione del prodotto."></textarea><td id="erroreDescrizione"></td>
+                    <textarea name="descrizione" id="descrizione" rows="3" cols="40" onfocusout="validateDescrizione()" placeholder="Una breve descrizione del prodotto."></textarea><p id="erroreDescrizione"></p>
 
                 </div>
                 <div class="riga_input">
                     <div class="spazioinput">
-                        <input type="submit" value="Aggiungi prodotto" class="siteButtons2" name="submitProdotto" id="submitProdotto"></td>
+                        <input type="submit" value="Aggiungi prodotto" class="siteButtons2" name="submitProdotto" id="submitProdotto">
+                        <p>
+                            <c:if test="${errore != null}">
+                                ${errore}
+                            </c:if>
+                        </p>
                     </div>
                 </div>
-                </table>
             </form>
         </div>
     </c:when>

@@ -17,19 +17,14 @@
                     <div class="spazioinput">
                         <input type="text" name="nuovaEmail" id="nuovaEmail" onfocusout="validateMail()"
                                placeholder="Nuova e-mail">
-                        <td><input type="submit" class="siteButtons3" value="cambia email" id="submitEmail" name="submitEmail">
-                        </td>
+                        <p id="erroreMail">
+                            <c:if test="${errore != null}">
+                            ${errore}
+                        </c:if></p>
                     </div>
+                    <input type="submit" class="siteButtons3" value="cambia email" id="submitEmail" name="submitEmail">
                 </div>
             </form>
-            <tr>
-                <td id="erroreMail"></td>
-            </tr>
-            <c:if test="${errore != null}">
-                <tr>
-                    <td>${errore}</td>
-                </tr>
-            </c:if>
         </div>
         <%@ include file="/WEB-INF/result/footer.jsp" %>
     </c:when>

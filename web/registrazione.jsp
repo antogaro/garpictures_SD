@@ -15,11 +15,11 @@
             <form name="formRegistrazione" id="formRegistrazione" action="Registrazione" method="post">
                 <div class="riga_input">
                     <div class="spazioinput">
-                        <input type="text" name="nome" id="nome" placeholder="Nome" onfocusout="validateName()">
+                        <input type="text" name="nome" id="nome" placeholder="Nome" onfocusout="validateName()" class="input">
                         <p id="erroreNome"></p>
                     </div>
                     <div class="spazioinput">
-                        <input type="text" name="cognome" id="cognome" placeholder="Cognome" onfocusout="validateSurname()">
+                        <input type="text" name="cognome" id="cognome" placeholder="Cognome" onfocusout="validateSurname()" class="input">
                         <p id="erroreCognome"></p>
                     </div>
                 </div>

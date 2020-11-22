@@ -15,32 +15,31 @@
             <form action="CambiaIndirizzo" method="post" id="modificaIndirizzo">
                 <div class="riga_input">
                     <div class="spazioinput">
-                        <input type="text" name="nuovaProvincia" id="nuovaProvincia" onfocusout="validateNuovaProvincia()"
+                        <input type="text" name="nuovaProvincia" id="nuovaProvincia"
+                               onfocusout="validateNuovaProvincia()"
                                placeholder="Nuova provincia">
-                        <td id="erroreNuovaProvincia"></td>
+                        <p id="erroreNuovaProvincia"></p>
                     </div>
                     <div class="spazioinput">
                         <input type="text" name="nuovaCitta" id="nuovaCitta" onfocusout="validateNuovaCitta()"
                                placeholder="Nuova città">
-                        <td id="erroreNuovaCitta"></td>
+                        <p id="erroreNuovaCitta"></p>
                     </div>
                 </div>
                 <div class="riga_input">
                     <div class="spazioinput">
                         <input type="text" name="nuovaVia" id="nuovaVia" onfocusout="validateNuovaVia()"
                                placeholder="Nuova via">
-                        <td id="erroreNuovaVia"></td>
+                        <p id="erroreNuovaVia"></p>
                     </div>
                 </div>
                 <div class="riga_input">
                     <input type="submit" class="siteButtons2" value="Cambia indirizzo" id="submitCambiaIndirizzo">
+                    <p> <c:if test="${errore != null}">
+                        ${errore}
+                    </c:if></p>
                 </div>
             </form>
-            <c:if test="${errore != null}">
-                <tr>
-                    <td>${errore}</td>
-                </tr>
-            </c:if>
         </div>
         <%@ include file="/WEB-INF/result/footer.jsp" %>
     </c:when>

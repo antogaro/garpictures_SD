@@ -14,32 +14,18 @@
             <div class="logeen">
                 <p class="Entra" align="center">Entra</p>
                 <form class="loginform" action="Login" method="post">
-                    <table>
-                        <tr>
-                            <td>
-                                <input class="ilogin" type="text" name="nomeUtente" id="nomeUtente" placeholder="Nome Utente">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="spazioinput"><input class="ilogin" type="password" name="password" id="password"
-                                                                placeholder="Password">
-                                    <p>
-                                        <c:if test="${login !=null}">
-                                    <p>${login}</p>
-                                    </c:if>
-                                    </p>
-                                </div>
+                    <div class="spazioinput">
+                            <input class="ilogin" type="text" name="nomeUtente" id="nomeUtente" placeholder="Nome Utente">
+                    </div>
+                    <div class="spazioinput">
+                        <input class="ilogin" type="password" name="password" id="password"
+                                                    placeholder="Password">
+                        <c:if test="${login !=null}">
+                            <p>${login}</p>
+                        </c:if>
+                    </div>
+                    <input class="bottonelogin" type="submit" id="submitLogin" value="Login" align="center">
 
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><input class="bottonelogin" type="submit" id="submitLogin" value="Login" align="center"></td>
-                        </tr>
-                        <tr>
-
-                        </tr>
-                    </table>
                 </form>
 
             </div>

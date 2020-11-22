@@ -26,10 +26,7 @@
     outline: none;
     box-sizing: border-box;
     border: 2px solid rgba(0, 0, 0, 0.02);
-    margin-bottom: 50px;
-    margin-left: 46px;
     text-align: center;
-    margin-bottom: 27px;
     font-family: 'Ubuntu', sans-serif;
 }
 
@@ -62,9 +59,22 @@
     padding-bottom: 10px;
     padding-top: 10px;
     font-family: 'Ubuntu', sans-serif;
-    margin-left: 35%;
     font-size: 13px;
     box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+}
+
+.loginform .spazioinput{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+    flex:1;
+}
+
+.loginform .spazioinput p{
+    margin-top: 6px;
+    color: #aa2222;
 }
 
 .bottoneRegistrazione {
@@ -126,6 +136,13 @@
 
 form.loginform {
     padding-top: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    height: 90%;
+    margin: 10px;
 }
 
 #spazio_login {
@@ -149,6 +166,9 @@ form.loginform {
     height: 300px;
     border-radius: 1.5em;
     box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 #prodottettag {
@@ -509,10 +529,6 @@ html {
 .spazioregistrazione form .riga_input .spazioinput .input {
     border: none;
     border-bottom: 1px solid #a79bb5;
-}
-
-.spazioregistrazione form .riga_input .spazioinput:last-child {
-    justify-content: center;
 }
 
 .spazioregistrazione form .riga_input .spazioinput p {

@@ -18,23 +18,22 @@
                     <div class="spazioinput">
                         <input type="password" name="nuovaPassword" id="nuovaPassword" onfocusout="validatePassword()"
                                placeholder="Nuova Password">
-                        <td id="erroreNuovaPassword"></td>
+                        <p id="erroreNuovaPassword"></p>
                     </div>
                     <div class="spazioinput">
                         <input type="password" name="nuovaPasswordConferma" id="nuovaPasswordConferma"
                                onfocusout="validateConfermaPassword()" placeholder="Ripeti Password">
-                        <td id="erroreNuovaPasswordConferma"></td>
+                        <p id="erroreNuovaPasswordConferma"></p>
                     </div>
                 </div>
                 <div class="riga_input">
                     <input type="submit" class="siteButtons2" value="cambia password" id="submitCambiaPassword">
+                    <p>
+                        <c:if test="${errore != null}">
+                        ${errore}
+                    </c:if></p>
                 </div>
             </form>
-            <c:if test="${errore != null}">
-                <tr>
-                    <td>${errore}</td>
-                </tr>
-            </c:if>
         </div>
         <%@ include file="/WEB-INF/result/footer.jsp" %>
     </c:when>
