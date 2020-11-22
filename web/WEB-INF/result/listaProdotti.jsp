@@ -14,7 +14,7 @@
                 <form action="CancellaProdotto" method="get" id="cancellaProdotto" class="cancellaProdotto">
                     <c:forEach items="${prodotti}" var="prodotto">
                         <div id="divProdotto">
-                            <img src="./img/${prodotto.source}">
+                            <div style="background-image: url('./img/${prodotto.source}')" class="immagine"></div>
                             <p>${prodotto.nome}</p>
                             <button type="submit" class="siteButtons" name="prodotto" value="${prodotto.id}">Elimina
                                 prodotto
@@ -41,11 +41,11 @@
         $.post("FiltraPerNome", {field1: $nomeProdotto}, function (responseJson) {
             $.each(responseJson, function (index, prodotto) {
                 $(".cancellaProdotto").append("<div id=\"divProdotto\">\n" +
-                    "                            <img src=\"./img/"+prodotto.source+"\">\n" +
-                    "                            <p>"+prodotto.nome+"</p>\n" +
-                    "                            <button type=\"submit\" class=\"siteButtons\" name=\"prodotto\" value=\""+prodotto.id+"\">Elimina\n" +
+                    "                            <div style=\"background-image: url('./img/"+prodotto.source+"')\" class=\"immagine\"></div>\n" +
+                    "                            <p>"+ prodotto.nome +"</p>\n" +
+                    "                            <button type=\"submit\" class=\"siteButtons\" name=\"prodotto\" value=\""+  prodotto.id+"\">Elimina\n" +
                     "                                prodotto\n" +
-                    "                            </button>")
+                    "                            </button></div>")
             });
         });
     });
