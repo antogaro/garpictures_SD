@@ -11,4 +11,4 @@ Progetto di TSW per la classe del 2019/2020.
 
 ### Informazioni
 
-Il progetto Garpictures si propone di creare una piattaforma per la condivisione di immagini di stock, questo servizio sarà disponibile tramite un’applicazione online con la quale sarà possibile hostarle. L'applicazione viene creata da zero.
+Il progetto Garpictures si propone di creare una piattaforma per la vendita di immagini di stock, questo servizio sarà disponibile tramite un’applicazione online con la quale sarà possibile hostarle. L'applicazione viene creata da zero.

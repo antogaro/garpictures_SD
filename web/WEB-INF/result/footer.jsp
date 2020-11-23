@@ -8,7 +8,7 @@
 </div>
 <div class="footer">
     <p align="center">
-    Contatti: <a href="NULL">a.garofalo33@studenti.unisa.it</a>, <a href="NULL">c.maio9@studenti.unisa.it</a> <br>
+    Contatti: <a href="mailto:a.garofalo33@studenti.unisa.it">a.garofalo33@studenti.unisa.it</a>, <a href="c.maio9@studenti.unisa.it">c.maio9@studenti.unisa.it</a> <br>
     Garpictures: un sito su cui poter acquistare ogni tipo di immagini in modo rapido e sicuro.<br>
         Eventi in programma: Il 23/11/2020 presenteremo per la prima volta il sito!<br>
     </p>
