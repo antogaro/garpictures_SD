@@ -1,3 +1,5 @@
+![Garpictures](https://github.com/Huntonion/Garpictures/blob/master/banner.png)
+
 # Garpictures
 
 project for the 2019/2020 TSW class.
