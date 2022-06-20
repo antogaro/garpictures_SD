@@ -1,14 +1,20 @@
 # Garpictures
-Progetto TSW
 
-Progetto di TSW per la classe del 2019/2020.
+project for the 2019/2020 TSW class.
 
 
-### Membri del gruppo
+### Projcet Members
  
 * Garofalo Antonio (0512102870)
 * Maio Cosimo (0512103899)
 
-### Informazioni
+### Informations
 
-Il progetto Garpictures si propone di creare una piattaforma per la vendita di immagini di stock, questo servizio sarà disponibile tramite un’applicazione online con la quale sarà possibile hostarle. L'applicazione viene creata da zero.
+Garpictures is an e-commerce webiste aimed at selling stock images.
+
+### How to Run
+
+first of all,
+* ```
+git clone https://github.com/Huntonion/Garpictures/
+```
