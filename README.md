@@ -16,7 +16,7 @@ Garpictures is an e-commerce webiste aimed at selling stock images.
 
 ### How to Build
 
-Running this problem is fairly simple :
+Running this project is fairly simple :
  ```
  git clone https://github.com/Huntonion/Garpictures/
  ```
