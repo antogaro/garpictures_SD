@@ -39,5 +39,5 @@ If you're just interested in running it:
   cd bin
   sh startup.sh
   ```
- and the project should be loaded in tomcat.
+ and the project should be loaded in tomcat, so you can access it by going to `http://localhost:8080/TSW_war/home` into the browser of your choice.
 
