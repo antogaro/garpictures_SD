@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;500&display=swap');
+*{
+    font-family: 'Raleway', sans-serif;
+    padding: 0px;
+    margin: 0px;
+}
+
+.menu li a:link{
+    text-decoration: none;
+}
+
+.menu li a:visited{
+    text-decoration: none;
+    color: inherit;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    background-color: #E6ECF5;
+    border-bottom: 1px solid #E4EAF3;
+    padding: 0 4%;
+    -webkit-box-shadow: 0px -6px 15px #000000;
+    box-shadow: 0px -6px 15px #000000;
+}
+header #spazio_logo{
+
+}
+header #spazio_ricerca{
+    min-width: 200px;
+}
+
+header #spazio_ricerca #inviaTags{
+    display: flex;
+    align-items: center;
+}
+
+header #spazio_ricerca #searchButton{
+    border:0;
+    background:transparent;
+}
+
+header #spazio_ricerca #searchButton:hover{
+    cursor: pointer;
+}
+
+header #spazio_ricerca #tags{
+    border:none;
+    border-bottom: 1px solid #917898;
+    background-color:   #E6ECF5;
+    font-family: 'Raleway', sans-serif;
+    height: 40px;
+    font-size: 20px;
+}
+
+header #spazio_ricerca #tags::placeholder{
+    color: #917898;
+}
+
+header #spazio_menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+header #spazio_menu ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+}
+header #spazio_menu ul li{
+    margin: 0 10px;
+}
+header #spazio_carrello{
+
+}
+header #spazio_hamburger,
+#menu_mobile{
+    display:none;
+}
+
+header #hamburger{
+    border:0;
+    background:transparent;
+}
+
+
+header #hamburger:hover{
+    cursor: pointer;
+}
+
+@media all and (max-width: 767px){
+    header{
+        border: none;
+    }
+
+    header #spazio_logo{
+
+    }
+    header #spazio_ricerca{
+
+    }
+    header #spazio_menu{
+        display: none;
+    }
+    header #spazio_carrello{
+
+    }
+    header #spazio_hamburger{
+        display:flex;
+    }
+    #menu_mobile{
+        height:0px;
+        overflow: hidden;
+        max-height: 60%;
+        font-family: 'Raleway', sans-serif;
+        display: flex;
+        justify-content:center;
+        background-color: #E6ECF5;
+        border-bottom: 1px solid #E4EAF3;
+    }
+
+    #menu_mobile ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        list-style-type: none;
+    }
+    #menu_mobile ul li{
+        margin: 10px auto;
+    }
+
+}

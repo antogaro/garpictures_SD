@@ -1,0 +1,662 @@
+.footer {
+    display: flex;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background: linear-gradient(to bottom, #8AA7CF, #5D85BD);
+    height: 200px;
+    box-shadow: 0px -2px 5px #858585;
+    justify-content: center;
+    padding-top: 20px;
+    font-size: 11px;
+}
+
+.ilogin {
+    width: 76%;
+    color: rgb(38, 50, 56);
+    opacity: 1;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 1px;
+    background: rgba(136, 126, 126, 0.04);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    box-sizing: border-box;
+    border: 2px solid rgba(0, 0, 0, 0.02);
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+#bottoniCarrello {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+
+.prodottiWrapper{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    align-content: center;
+}
+
+.bottonelogin {
+    cursor: pointer;
+    border-radius: 5em;
+    color: #fff;
+    opacity: 1;
+    background: linear-gradient(to right, #aa2222, #2222aa);
+    border: 0;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 13px;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+}
+
+.loginform .spazioinput{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+    flex:1;
+}
+
+.loginform .spazioinput p{
+    margin-top: 6px;
+    color: #aa2222;
+}
+
+.bottoneRegistrazione {
+    width: 30%;
+    min-width: 100px;
+    cursor: pointer;
+    border-radius: 5em;
+    color: #fff;
+    opacity: 1;
+    background: linear-gradient(to right, #aa2222, #2222aa);
+    border: 0;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 13px;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+    margin-left: 30%;
+}
+
+
+.siteButtons {
+    padding: 5px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5em;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 13px;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+    background-color: #EACCD9;
+    border: 0;
+}
+
+.siteButtons2 {
+    padding: 5px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5em;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 13px;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+    background-color: #CCEACF;
+    border: 0;
+}
+
+.siteButtons3 {
+    margin: 5px;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 5em;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 13px;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+    background-color: #EADECC;
+    border: 0;
+}
+
+.un:focus, .pass:focus {
+    border: 2px solid rgba(0, 0, 0, 0.18) !important;
+
+}
+
+form.loginform {
+    padding-top: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    height: 90%;
+    margin: 10px;
+}
+
+#spazio_login {
+    min-height: 700px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    position: relative;
+    background-image: url("../sitimg/garpiclogin.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 600px 600px;
+}
+
+.logeen {
+    position: relative;
+    background-color: #FFFFFF;
+    opacity: 0.9;
+    width: 320px;
+    height: 300px;
+    border-radius: 1.5em;
+    box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#prodottettag {
+    justify-content: center;
+}
+
+#divProdotto {
+    background-color: white;
+    justify-content: space-between;
+    box-shadow: 10px 10px 5px #aaaaaa;
+    border: none;
+    border-radius: 0em;
+}
+
+.entra {
+    padding-top: 10px;
+    opacity: 1;
+    color: #2222aa;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    font-size: 23px;
+}
+
+.prodotti {
+    max-width: 800px;
+    max-height: 800px;
+    min-width: 300px;
+    min-height: 300px;
+}
+
+.prodottihome {
+    height: auto;
+    width: auto;
+    max-width: 360px;
+    max-height: border-box;
+}
+
+.cartolina {
+    width: 284px;
+    padding: 10px 10px 25px 10px;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 10px 10px 5px #aaaaaa;
+}
+
+#cartolinafoto {
+    width: auto;
+    min-width: 230px;
+    min-height: 230px;
+    max-height: 230px;
+    overflow: hidden;
+}
+
+#cartolinacorsivo {
+    font-family: Forte;
+    font-weight: bolder;
+    font-size: large;
+    transform: rotate(-11deg);
+    float: right;
+    padding-right: 20px;
+}
+
+.containerImmagini {
+    background-repeat: no-repeat;
+    background-size: auto;
+    border: none;
+    padding: 0;
+    margin: 10px;
+}
+
+.containerImmagini:hover {
+    cursor: pointer;
+}
+
+body {
+    background-color: #CEDAEB;
+    height: 100%;
+}
+
+
+html {
+    height: 100%;
+}
+
+#main-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+#content-wrapper {
+    flex: 1;
+    padding: 60px 0px;
+}
+
+
+.sito {
+    display: flex;
+    justify-content: center;
+    padding: 18px;
+    flex-direction: row;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    background-color: #E6ECF5;
+    flex-wrap: wrap;
+    border-radius: 1.5em;
+    box-shadow: 0px 11px 25px 2px rgba(0, 0, 0, 0.14)
+}
+
+#homecontainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 1%;
+    margin: 1%;
+    background-color: #E6ECF5;
+    border: 0px;
+    border-radius: 1.5em;
+    box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+}
+
+#homecontainer #spazio_acquisto {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#tagcontainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.tagsForm {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin: 2px;
+}
+
+#homecontainer #chiamaProdotto {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.tagButton {
+    box-shadow: inset 0px 1px 3px 0px #91b8b3;
+    background-color: #a79bb5;
+    border-radius: 5px;
+    border: 1px solid #566963;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: 'Raleway', sans-serif;
+    font-size: 15px;
+    margin: 3px;
+    padding: 1px;
+    text-decoration: none;
+    text-shadow: 0px -1px 0px #2b665e;
+}
+
+.tagButton:hover {
+    background-color: #a96bb8;
+}
+
+
+.spazioregistrazione {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+
+}
+
+.spazioregistrazione form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    width: 70%;
+    box-sizing: border-box;
+    background-color: #E6ECF5;
+    border: 0px;
+    border-radius: 1.5em;
+    box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+    padding: 30px 3%;
+}
+
+.spazioregistrazione form .riga_input {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-content: flex-start;
+}
+
+.spazioregistrazione form .riga_input:last-child {
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+#homecontainer .spazio_prodotto {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    border-bottom: 1px solid #86BBD8;
+    padding: 10px 80px;
+}
+
+#homecontainer .spazio_prodotto .spazio_infoProdotto {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+#homecontainer #spazio_finalizza {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px;
+}
+
+#homecontainer #spazio_finalizza #completaPagamento {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#homecontainer #spazio_finalizza #completaPagamento #spazio_info_pagamento {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+    width: 50%;
+    padding-top: 40px;
+}
+
+#homecontainer #spazio_finalizza #completaPagamento #spazio_info_pagamento .campoInput {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 40%;
+    min-width: 250px;
+    height: 40px;
+    box-sizing: border-box;
+    margin: 30px;
+}
+
+#homecontainer #spazio_finalizza #completaPagamento #spazio_info_pagamento .campoInput input {
+    padding: 10px 20px;
+    border-bottom: 1px solid #86BBD8;
+}
+
+.spazioregistrazione form .riga_input .spazioinput {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 40%;
+    min-width: 250px;
+    height: 40px;
+    box-sizing: border-box;
+    margin: 30px 0;
+}
+
+#descrizione {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    min-width: 250px;
+    height: 80px;
+    box-sizing: border-box;
+    margin: 0px 0;
+    padding: 15px;
+    align-content: center;
+    align-self: center;
+}
+
+.carrelloWrapper{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#carrelloContainer #prodottoCarrello{
+    width: 100%;
+    height: auto;
+    max-width: 490px;
+}
+
+#carrelloContainer #spazioRimuoviCarrello{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    height: 60%;
+    padding: 10px;
+}
+
+#cancellaProdotto{
+   width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+#cancellaProdotto #divProdotto{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 50px;
+    align-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+#cancellaProdotto #divProdotto .immagine {
+    height: 150px;
+    background-size: cover;
+    background-position: center;
+    width: 180px;
+}
+
+.listaWrapper .sito .searchNome{
+    border:none;
+    border-bottom: 1px solid #917898;
+    background-color: #E6ECF5;
+    font-family: 'Raleway', sans-serif;
+    height: 40px;
+    font-size: 20px;
+    align-self: center;
+}
+
+.listaWrapper .sito{
+    align-content: center;
+    flex-direction: column;
+}
+
+.spazioregistrazione form .riga_input .spazioinput .input {
+    border: none;
+    border-bottom: 1px solid #a79bb5;
+}
+
+#singoloProdottoWrapper #divProdotto{
+    background-color: white;
+    justify-content: space-between;
+    box-shadow: 10px 10px 5px #aaaaaa;
+    border: none;
+    border-radius: 0em;
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+}
+
+#singoloProdottoWrapper #divProdotto #containerImmagineTag{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+
+#singoloProdottoWrapper #divProdotto #spazio_descrizione #spazio_bottoni{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    height: 120px;
+}
+
+
+#singoloProdottoWrapper #divProdotto #spazio_descrizione {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px;
+    align-content: center;
+    align-items: center;
+}
+
+#singoloProdottoWrapper #divProdotto #spazio_descrizione {
+    display: flex;
+    flex-direction: column;
+}
+
+#singoloProdottoWrapper #divProdotto #spazio_descrizione #descrizioneProdotto {
+    font-weight: 200;
+}
+
+#singoloProdottoWrapper #divProdotto #containerImmagineTag #ricercaPerTag{
+    padding: 10px;
+}
+
+#singoloProdottoWrapper #divProdotto #containerImmagineTag .prodotti{
+    width: 100%;
+    height: auto;
+    max-width: 800px;
+    min-height: auto;
+}
+
+.homeWrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    box-sizing: border-box;
+    flex-direction: column;
+}
+
+.homeWrapper .finalizza{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding: 20px;
+    position: absolute;
+    top: 90px;
+    z-index: 999;
+    width: 300px;
+    background-color: #CCEACF;
+    -webkit-box-shadow: 0px 6px 18px #010101;
+    box-shadow: 0px 6px 18px #010101;
+    border: 2px solid #CEDAEB;
+    border-radius: 20px;
+}
+
+.spazioregistrazione form .riga_input .spazioinput p {
+    padding: 0;
+    margin: 0 auto;
+}
+
+.spazioregistrazione form .riga_input .spazioinput input {
+    padding: 10px 20px;
+}
+
+@media all and (max-width: 767px) {
+    .spazioregistrazione form .riga_input {
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+    }
+
+    #homecontainer .spazio_prodotto {
+        flex-direction: column;
+    }
+
+    #cancellaProdotto #divProdotto{
+        flex-direction: column;
+    }
+
+    #cancellaProdotto{
+        width: 60%;
+    }
+
+    #singoloProdottoWrapper #divProdotto{
+        flex-direction: column;
+    }
+}
+
+
+@media all and (max-width: 1024px) {
+    #homecontainer #spazio_finalizza #completaPagamento #spazio_info_pagamento {
+        flex-direction: column;
+    }
+}
+
+@media all and (max-width: 710px) {
+    #carrelloContainer #spazioRimuoviCarrello{
+        justify-content: flex-start;
+    }
+}
