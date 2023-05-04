@@ -38,7 +38,7 @@
         %>
     </c:otherwise>
 </c:choose>
-<%@ include file="/WEB-INF/result/footer.jsp" %>
+<%@ include file="/web/WEB-INF/result/footer.jsp" %>
 </body>
 <script src="formValidator.js"></script>
 </html>

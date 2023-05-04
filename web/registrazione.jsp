@@ -77,7 +77,7 @@
                 <p>${errore}</p>
             </div>
         </c:if>
-        <%@ include file="/WEB-INF/result/footer.jsp" %>
+        <%@ include file="/web/WEB-INF/result/footer.jsp" %>
     </c:when>
     <c:otherwise>
         <%

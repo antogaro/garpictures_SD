@@ -1,43 +1,12 @@
-![Garpictures](https://github.com/Huntonion/Garpictures/blob/master/banner.png)
-
 # Garpictures
 
-project for the 2019/2020 TSW class.
-
+Forked from my own project, [Garpictures](https://github.com/Huntonion/Garpictures), for the Software Dependability class project. It is an ecommerce website for stock images.
+The objective of this project is to adapt software dependability practices to it, such as building it in CI/CD, quality analysis, migration on Docker, code coverage analysis, testing, etc.
 
 ### Projcet Members
  
-* Garofalo Antonio (0512102870)
-* Maio Cosimo (0512103899)
+* Garofalo Antonio (0522501186)
 
-### Informations
 
-Garpictures is an e-commerce webiste aimed at selling stock images.
 
-### How to Build
-
-Running this project is fairly simple :
- ```
- git clone https://github.com/Huntonion/Garpictures/
- ```
-Then run the ```GarpicturesDB.sql``` file using SQL server in order to load the database.
-Connect the IDE of your choice to the DB and remember to change user and password in the ```ConnessioneDB.java``` java class.
-Install the dependencies, specifically:
-* mysql connector
-* jstl
-* servlet-api
-
-Once done simply build it and run it on the IDE.
-
-### How to Run
-
-If you're just interested in running it:
-* load the database using the ```GarpicturesDB.sql``` file however you want
-* copy the ```TSW_war.war``` file into the ```webapps``` folder of your tomcat directory.
-* then from your tomcat directory:
-* ```
-  cd bin
-  sh startup.sh
-  ```
- and the project should be loaded in tomcat, so you can access it by going to `http://localhost:8080/TSW_war/home` into the browser of your choice.
 
