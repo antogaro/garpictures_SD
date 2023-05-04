@@ -13,15 +13,6 @@
         <defaultGoal>package</defaultGoal>
         <plugins>
             <plugin>
-                <artifactId>maven-war-plugin</artifactId>
-
-                 				<configuration>
-                                    <warSourceDirectory>${basedir}/</warSourceDirectory>
-                                    <failOnMissingWebXml>false</failOnMissingWebXml>
-                                </configuration>
-            </plugin>
-
-            <plugin>
 
                 <groupId>org.apache.tomcat.maven</groupId>
                 <artifactId>tomcat7-maven-plugin</artifactId>
@@ -44,6 +35,10 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
                 <version>3.2.2</version>
+                <configuration>
+                    <warSourceDirectory>${basedir}/web</warSourceDirectory>
+                    <useCache>true</useCache>
+                </configuration>
             </plugin>
         </plugins>
     </build>
